@@ -61,6 +61,11 @@
 					<h1 class="headline">
 					    remember your dreams
 					</h1>
+				
+					<a href="http://kck.st/15z9W7D" target="_blank" class="button headline">
+					    We are kickstarting
+					</a>
+					
 				</div>			
 				
 			</div>
@@ -220,7 +225,7 @@
 						We are live on Kickstarter
 					</h3>	
 				
-					<a href="http://www.kickstarter.com/projects/hunterleesoik/shadow-community-of-dreamers" target="_blank" class="button headline">
+					<a href="http://kck.st/15z9W7D" target="_blank" class="button headline">
 					    Contribute now
 					</a>
 									
@@ -318,7 +323,7 @@
 
 	<div id="menu" class="cf">		
 		<ul class="cf">
-			<li id="invite"><a href="http://www.kickstarter.com/projects/hunterleesoik/shadow-community-of-dreamers" target="_blank">Contribute now</a></li>	
+			<li id="invite"><a href="http://kck.st/15z9W7D" target="_blank">Contribute now</a></li>	
 		</ul>	
 	</div>
 

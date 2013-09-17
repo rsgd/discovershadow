@@ -388,7 +388,10 @@ function start() {
 		$img1.hide(); 
 		$('html').removeClass("loading");
 				
-		$('#secStart h1').fadeIn(800,"easeInOutQuad");				
+		$('#secStart h1').fadeIn(800,"easeInOutQuad");
+		window.setTimeout(function(){
+			$('#secStart a.button').css({opacity: 1});		
+		},700);		
 		// window.setTimeout(function(){
 			$img1.fadeIn(1800,"easeInOutQuad");				
 		// },400);		

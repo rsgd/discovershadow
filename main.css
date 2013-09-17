@@ -724,7 +724,7 @@ body.subPage #secCredits .sectionContent {
 	text-align: center;
 }
 
-body.subPage a.button, #secInvite a.button {
+body.subPage a.button, #secInvite a.button, #secStart a.button {
 	display: inline-block;
 	color: #fff;
 	border: 1px solid #fff;
@@ -738,6 +738,11 @@ body.subPage a.button, #secInvite a.button {
 	-webkit-transition: 	0.25s ease-in-out;
 	-moz-transition: 		0.25s ease-in-out;
 	-o-transition: 			0.25s ease-in-out;
+	position: relative;
+}
+
+#secStart a.button {
+	opacity: 0;
 }
 
 body.subPage .button:hover {
@@ -745,10 +750,23 @@ body.subPage .button:hover {
 	color: #e88074;
 }
 
-#secInvite a.button:hover {
+#secStart a.button:hover  {
 	background: #fff;
 	color: #afa287;
 }
+
+#secInvite a.button {
+	border-color: #f95640;
+	background: #f95640;
+	color: #fff;
+}
+
+#secInvite a.button:hover {
+	border-color: #d84430;
+	background: #d84430;
+	color: #fff;
+}
+
 
 #links {
 	text-align: center;
