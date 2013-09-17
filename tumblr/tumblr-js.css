@@ -1,0 +1,41 @@
+/* shadow js styles
+autor: Raffael Stueken
+*/
+
+/* main */
+
+#back img.back, #back h1 {
+	display: none;
+}
+
+body {
+	/* overflow: hidden; */
+}
+
+body.started {
+/*	overflow: auto; */
+}
+
+#wrapper {
+	background: #090909;
+}
+
+body.started #wrapper {
+	background: #fff;
+}
+
+#menu {
+	opacity: 0;
+	transition: 			opacity 0s ease-in-out;
+	-webkit-transition: 	opacity 0s ease-in-out;
+	-moz-transition: 		opacity 0s ease-in-out;
+	-o-transition: 			opacity 0s ease-in-out;
+}
+
+#menu.show {
+	opacity: 1;
+	transition: 			opacity 0.4s ease-in-out;
+	-webkit-transition: 	opacity 0.4s ease-in-out;
+	-moz-transition: 		opacity 0.4s ease-in-out;
+	-o-transition: 			opacity 0.4s ease-in-out;
+}

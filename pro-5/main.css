@@ -1,0 +1,1196 @@
+/* shadow 
+autor: Raffael Stueken
+*/
+
+
+/* COMMON STYLES START */
+
+html, a, div, select, input { outline: none; }
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	color: #141414;
+	text-align: center;
+	background-color: #fff;
+	overflow-y: scroll;
+}
+
+body.loading {
+}
+
+img, iframe, input {
+	border:none;
+}
+
+a {
+	color: #141414;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #e95948;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 auto 1em auto;
+}
+
+/* setup */
+
+#wrapper {
+	margin: 50px;
+	background: #222;
+}
+
+#borderTop, #borderBottom {
+	width: 100%;
+	height: 50px;
+	background: #fff;
+	position: fixed;
+	top: 0;
+}
+
+#borderBottom {
+	bottom: 0;
+	top: auto;
+}
+
+/* top logo */
+
+#topLogo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -13px 0 0 -48px;
+	width: 96px;
+	height: 24px;
+	opacity: 0;
+	cursor: pointer;
+	background: url(img/shadow_logo-big.gif) center center no-repeat;
+	transition: 			opacity 0.8s ease-in-out;
+	-webkit-transition: 	opacity 0.8s ease-in-out;
+	-moz-transition: 		opacity 0.8s ease-in-out;
+	-o-transition: 			opacity 0.8s ease-in-out;
+}
+
+body.content #topLogo {
+	opacity: 1;
+}
+
+
+/* section */
+
+section {
+	background: #222;
+	height: 600px;
+	position: relative;
+	cursor: pointer;
+}
+
+.sectionWrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.sectionContent {
+	padding-top: 50px;
+	position: relative;
+}
+
+.bottomContent {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 100px;
+}
+
+.backImg, .backImg img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.full {
+	height: 900px;
+}
+
+.startFull {
+	height: 1200px;
+}
+
+.static .sectionWrapper {
+	padding-top: 200px;
+}
+
+.staticSmall {
+	height: 400px;
+}
+
+.staticSmall .sectionWrapper {
+	padding-top: 120px;
+}
+
+.leftContent, .rightContent {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.rightContent {
+	float: right;
+}
+
+.bottomSpace {
+	margin-bottom: 200px;
+}
+
+h1 {
+	color: #fff;
+	margin: 20% 0 0.2em 0;
+	font-size: 1.375em;
+	line-height: 1.35em;
+	letter-spacing: 0.1em;
+	font-weight: normal;
+	position: relative;
+	text-transform: uppercase;
+}
+
+h1 {
+	color: #fff;
+	margin: 0 0 0.2em 0;
+	font-size: 1.8em;
+	line-height: 1.1em;
+	letter-spacing: 0.05em;
+	font-weight: normal;
+	position: relative;
+	text-transform: uppercase;
+}
+
+h1 {
+	color: #fff;
+	margin: -40px 0 0.2em 0;
+	font-size: 3.6em;
+	line-height: 1.1em;
+	letter-spacing: 0.03em;
+	font-weight: normal;
+	position: relative;
+	text-transform: uppercase;
+}
+
+h3, h4 {
+	margin: 0 0 0.2em 0;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+h4 {
+	font-size: 0.875em;
+}
+
+p.big {
+	font-size: 1.375em;
+	line-height: 1.35em;
+	letter-spacing: 0.5px;
+}
+
+p.small {
+	font-size: 0.875em;
+	line-height: 1.35em;
+	letter-spacing: 0.25px;
+}
+
+p.upperCase {
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+p.centered {
+	margin-top: 160px;
+}
+
+
+/* content sec1 */
+/* logo */
+
+#secStart {
+	cursor: default;
+}
+
+#splashHead {
+	margin-top: 30%;
+}
+
+#scrollDown {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 200px;
+    margin: -110px 0 0 -100px;
+    cursor: pointer;
+	transition: 			all 0.25s ease-in-out;
+	-webkit-transition: 	all 0.25s ease-in-out;
+	-moz-transition: 		all 0.25s ease-in-out;
+	-o-transition: 			all 0.25s ease-in-out;
+}
+
+#scrollDown #tNotice {
+    opacity: 0;
+    color: #c7c2b6;
+    font-size: 0.625em;
+    letter-spacing: 0.15em;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;	
+	transition: 			all 0.5s ease-in-out;
+	-webkit-transition: 	all 0.5s ease-in-out;
+	-moz-transition: 		all 0.5s ease-in-out;
+	-o-transition: 			all 0.5s ease-in-out;
+}
+
+#scrollDown:hover #tNotice {
+	opacity: 1;
+}
+
+#scrollDown #iNotice {
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    width: 38px;
+    height: 38px;
+    border-radius: 20px;
+    margin: 0 0 0 -20px;
+    border: 1px solid #c7c2b6;
+    background: url("img/shadow_sprite.png") no-repeat center -81px;
+}
+
+body.scrolled #scrollDown {
+	top: 120px;
+	opacity: 0;
+}
+
+#secStart p, #secStart h3 {
+	color: #e95948;
+}
+
+#clouds {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+#cloud1, #cloud2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 75%;
+	width: 700px;
+	height: 700px;
+}
+
+#cloud2 {
+	position: absolute;
+	bottom: 0;
+	left: auto;
+	right: 0;
+}
+
+#clouds img {
+	width: 700px;
+	height: 700px;
+}
+
+
+/* content problem */
+
+#secProblem {
+	background: transparent;
+	color: #fff;
+}
+
+#secProblem h3 {
+	margin-top: -40px;
+}
+
+
+#secProblem p {
+	color: #c7c2b6;
+}
+
+
+/* content app */
+
+#secAppimg {
+	color: #fff;
+	background: #ff5842 url(img/shadow_app_01.jpg) center center no-repeat fixed;
+	background-size: cover;
+}
+
+#secAppimg h3.logo {
+	font-size: 2.6em;
+	margin: 0;
+	letter-spacing: 0;
+	margin-top: -80px;
+}
+
+#secAppimg p {
+	/* color: #c7c2b6; */
+	max-width: 760px;
+}
+
+#secAppimg .appIcon {
+	background: url(img/shadow_function_icons.png) center center no-repeat;
+	left: 50%;
+	height: 80px;
+	width: 300px;
+	top: auto;
+	bottom: 0;
+	margin: 0 0 0px -150px; 
+}
+
+/* content App img */
+
+.secAppfunc {
+	color: #c7c2b6;
+}
+
+.secAppfunc p {
+	width: 320px;
+}
+
+.secAppfunc .sectionContent {
+	padding-top: 0;
+}
+
+.secAppfunc .leftContent, .secAppfunc .rightContent {
+	width: 40%;
+	margin-top: 200px;
+	height: auto;
+}
+
+.secAppfunc .leftContent h4, .secAppfunc .rightContent h4 {
+	margin-top: -100px;
+}
+
+.appImg, .appIcon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.appImg {
+}
+
+.appIcon {
+	width: 80px;
+}
+
+/* start app */
+
+#secAppfunc1 .appImg {
+	background: #222 url(img/shadow_iphone5_01-big.png) center center no-repeat;
+}
+
+#secAppfunc1.sticky .appImg {
+	background: #222 url(img/shadow_iphone5_01-big.png) center center no-repeat fixed;
+}
+
+#secAppfunc1 .rightContent {
+	width: 50%;
+}
+
+#secAppfunc1 .rightContent #appIcon {
+	height: 80px;
+	width: 100%;
+	margin-top: -60px;
+	background: url(img/shadow_app_icon.png) center center no-repeat;	
+}
+
+#secAppfunc1 p {
+	margin-top: -50px;
+}
+
+/* wake up */
+
+#secAppfunc2 {
+	background: #f0f0f0;
+	color: #141414;
+}
+
+#secAppfunc2 .appImg {
+	background: url(img/shadow_iphone5_02-big.png) center center no-repeat fixed;
+}
+
+#secAppfunc2 .appIcon {
+	background: url(img/shadow_alarm_icons.png) center center no-repeat;
+	left: 20%;
+	height: 80px;
+	width: 300px;
+	top: 50%;
+	margin: -110px 0 0 -150px; 
+}
+
+/* record */
+
+#secAppfunc3 .appImg {
+	background: url(img/shadow_iphone5_03-big.png) center center no-repeat fixed;
+}
+
+#secAppfunc3 .appIcon {
+	background: url(img/shadow_record.png) center center no-repeat;
+	left: auto;
+	right: 20%;
+	height: 80px;
+	width: 360px;
+	top: 50%;
+	margin: -100px -180px; 
+}
+
+/* explore */
+
+#secAppfunc4 {
+	color: #141414;
+	background: #f0f0f0;
+}
+
+#secAppfunc4 .appImg {
+	background: transparent url(img/shadow_iphone5_04-big.png) center center no-repeat fixed;
+}
+
+#secAppfunc4 .appIcon {
+	background: url(img/shadow_sleep_track.png) center center no-repeat;
+	left: 0%;
+	height: 388px;
+	width: 480px;
+	top: 50%;
+	margin-top: -200px; 
+}
+
+/* text */
+
+#secAppfunc5 .appImg {
+	background: #222 url(img/shadow_iphone5_05-big.png) center center no-repeat fixed;
+}
+
+/* stats */
+
+#secAppfunc6 .appImg {
+	background: url(img/shadow_iphone5_06-big.png) center center no-repeat fixed;
+}
+
+#secAppfunc6.sticky .appImg {
+	background: url(img/shadow_iphone5_06-big.png) center center no-repeat;
+}
+
+#secAppfunc6 .appIcon {
+	background: url(img/shadow_stats.png) center center no-repeat;
+	left: auto;
+	right: 20%;
+	height: 170px;
+	width: 360px;
+	top: 50%;
+	margin: -140px -180px; 
+}
+
+/* invite */
+
+#secInvite {
+	cursor: default;
+	color: #c7c2b6;
+}
+
+#secInvite .appImg {	
+	background: url(img/shadow_back.jpg) top center no-repeat fixed;
+	opacity: 0.08;
+}
+
+#secInvite .sectionContent {
+	padding: 0;
+}
+
+#secInvite h4 {
+	margin-top: -20px;
+	color: #fff;
+}
+
+#secInvite .bottomContent p.small {
+	color: #57595c;
+	width: 440px;
+	max-width: 80%;
+	transition: 			all 0.25s ease-in-out;
+	-webkit-transition: 	all 0.25s ease-in-out;
+	-moz-transition: 		all 0.25s ease-in-out;
+	-o-transition: 			all 0.25s ease-in-out;
+}
+
+#secInvite .bottomContent h4 {
+	color: #57595c;
+	font-size: 0.75em;
+	border: 1px solid #3b3d3f;
+	width: 46px;
+	height: 46px;
+	line-height: 47px;
+	border-radius: 24px;
+	margin: 0 auto 10px;
+	transition: 			all 0.25s ease-in-out;
+	-webkit-transition: 	all 0.25s ease-in-out;
+	-moz-transition: 		all 0.25s ease-in-out;
+	-o-transition: 			all 0.25s ease-in-out;
+}
+
+#secInvite .bottomContent:hover h4 {
+	color: #c7c2b6;
+}
+
+#secInvite .bottomContent:hover p.small {
+	color: #c7c2b6;
+}
+
+
+/* subscribe */
+
+#subscribe {
+	position: absolute;
+	bottom: 15%;
+	left: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.indicates-required, label {
+	display: none;
+}
+
+#formWrapper {
+	background: #292929;
+	border-radius: 3px;
+	width: 340px;
+	max-width: 80%;
+	margin: 0 auto;
+	border: 1px solid #3b3d3f;
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.08);
+	transition: 			width 0.25s ease-in-out;
+	-webkit-transition: 	width 0.25s ease-in-out;
+	-moz-transition: 		width 0.25s ease-in-out;
+	-o-transition: 			width 0.25s ease-in-out;
+}
+
+input {
+	font-size: 1em;
+	background: transparent;
+	margin: 0;
+	font-family: inherit;
+	vertical-align: middle;
+}
+
+input.input {
+	width: 180px;
+	padding: 10px;
+	height: 20px;
+	color: #707070;
+	transition: 			width 0.25s ease-in-out;
+	-webkit-transition: 	width 0.25s ease-in-out;
+	-moz-transition: 		width 0.25s ease-in-out;
+	-o-transition: 			width 0.25s ease-in-out;
+}
+
+input.button {
+	font-size: 0.8125em;
+	padding: 5px 10px;
+	text-align: center;
+	margin: 5px;
+	background: #313131;
+	border-radius: 2px;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #fff;
+	letter-spacing: 1px;
+	transition: 			all 0.25s ease-in-out;
+	-webkit-transition: 	all 0.25s ease-in-out;
+	-moz-transition: 		all 0.25s ease-in-out;
+	-o-transition: 			all 0.25s ease-in-out;
+}
+
+#formWrapper.focused {
+	width: 400px;
+	max-width: 80%;
+}
+
+#formWrapper.focused input.input {
+	width: 240px;
+	color: #fff;
+}
+
+input.button:hover {
+	background: #e95948;
+}
+
+#formWrapper .field {
+	float: left;
+}
+
+#formWrapper .submit {
+	float: right;
+}
+
+
+/* credits */
+
+#secCredits {
+	cursor: default;
+	height: 160px;
+	background: #1c1c1c;
+}
+
+#secCredits .sectionContent {
+    padding-top: 35px;
+}
+
+#links {
+	text-align: center;
+}
+
+#links a {
+	display: inline-block;
+	margin: 0 0.5em 30px;
+	font-size: 0.75em;
+	color: #57595c;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;	
+	border: 1px solid #353739;
+	width: 40px;
+	height: 40px;
+	border-radius: 21px;	
+}
+
+#links a span {
+	display: inline-block;
+	text-indent: -9999px;
+	margin: 10px;
+	width: 20px;
+	height: 20px;	
+	background: transparent url(img/shadow_sprite.png) center top no-repeat;	
+	transition: 			all 0.25s ease-in-out;
+	-webkit-transition: 	all 0.25s ease-in-out;
+	-moz-transition: 		all 0.25s ease-in-out;
+	-o-transition: 			all 0.25s ease-in-out;	
+}
+
+#links a#facebook:hover span {
+	background: transparent url(img/shadow_sprite.png) center -20px no-repeat;
+}
+
+#links a#tumblr span {
+	background: transparent url(img/shadow_sprite.png) center -40px no-repeat;
+}
+
+#links a#tumblr:hover span {
+	background: transparent url(img/shadow_sprite.png) center -60px no-repeat;
+}
+
+#copyRight {
+	color: #57595c;
+	font-size: 0.5em;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+
+/* menu */
+
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menu {
+	margin: 0;
+	height: 100%;
+	position: relative;
+	opacity: 0;
+	transition: 			all 0.8s ease-in-out;
+	-webkit-transition: 	all 0.8s ease-in-out;
+	-moz-transition: 		all 0.8s ease-in-out;
+	-o-transition: 			all 0.8s ease-in-out;
+}
+
+body.scrolled #menu {
+	opacity: 1;
+}
+
+#menu ul {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -20px 0 0 -90px;
+}
+
+#menu li {
+	float: left;
+	display: inline-block;
+	height: 38px;
+	width: 180px;
+}
+
+#menu li a {
+	display: block;
+	line-height: 24px;
+	text-align: center;
+	font-size: 0.625em;
+	line-height: 35px;	
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	border: 1px solid #ddd;
+	background: #fff;
+	border-radius: 2px;
+	transition: 			all 0.25s ease-in-out;
+	-webkit-transition: 	all 0.25s ease-in-out;
+	-moz-transition: 		all 0.25s ease-in-out;
+	-o-transition: 			all 0.25s ease-in-out;
+}
+
+#menu li a:hover {
+	border: 1px solid #e88074;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+}
+
+body.scrolling #invite a {
+	color: #e95948;
+	border: 1px solid #e88074;
+}
+
+
+/* navigation */
+
+.naviHook {
+	height: 1px;
+	margin-bottom: -1px;
+	position: relative;
+}
+
+#nav {
+	position: fixed;
+	right: 2.5%;
+	top: 50%;
+	margin: -100px -4px 0 0;
+	opacity: 0;
+	transition: 			all 0.8s ease-in-out;
+	-webkit-transition: 	all 0.8s ease-in-out;
+	-moz-transition: 		all 0.8s ease-in-out;
+	-o-transition: 			all 0.8s ease-in-out;
+}
+
+body.scrolled #nav {
+	opacity: 1;
+}
+
+#acti {
+	position: absolute;
+	top: 0px;
+	right: -3px;
+	margin-top: 6px;
+	width: 10px;
+	height: 10px;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+	transition: 			all 0.5s ease-in-out;
+	-webkit-transition: 	all 0.5s ease-in-out;
+	-moz-transition: 		all 0.5s ease-in-out;
+	-o-transition: 			all 0.5s ease-in-out;
+}
+
+#nav ul {
+	position: relative;
+	padding-left: 20px;
+	transition: 			all 0.3s ease-in-out;
+	-webkit-transition: 	all 0.3s ease-in-out;
+	-moz-transition: 		all 0.3s ease-in-out;
+	-o-transition: 			all 0.3s ease-in-out;
+}
+
+#nav li {
+	height: 24px;
+	cursor: pointer;
+	position: relative;
+	width: 140px;
+	transition: 			all 0.5s ease-in-out;
+	-webkit-transition: 	all 0.5s ease-in-out;
+	-moz-transition: 		all 0.5s ease-in-out;
+	-o-transition: 			all 0.5s ease-in-out;
+}
+
+#nav li span {
+	display: block;
+	float: right;
+}
+
+#nav li .linkText {
+	opacity: 0;
+	overflow: hidden;
+	width: 0;
+	position: absolute;
+	top:1px;
+	right: -6px;
+	text-align: center;
+	font-size: 0.625em;
+	padding: 5px 10px;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	/*margin-right: 30px;*/
+	color: #141414;
+}
+
+#nav li .linkDot {
+	background: #000;
+	margin-top: 9px;
+	height: 6px;
+	width: 6px;
+	border-radius: 3px;
+	position: relative;
+}
+
+#nav ul:hover li {
+	/* width: 140px; */
+	opacity: 1 !important;
+}
+
+#nav li:hover .linkText {
+	opacity: 1;
+	/*margin-right: 20px;*/
+	width: 130px;
+	background: #fff;
+	display: block;
+	border-radius: 2px;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+	transition: 			opacity 0.5s ease-in-out;
+	-webkit-transition: 	opacity 0.5s ease-in-out;
+	-moz-transition: 		opacity 0.5s ease-in-out;
+	-o-transition: 			opacity 0.5s ease-in-out;
+}
+
+.a1 #l2 {
+	opacity: 0.5;
+}
+
+.a1 #l3 {
+	opacity: 0.2;
+}
+
+.a1 #l4 {
+	opacity: 0.1;
+}
+
+.a1 #l5 {
+	opacity: 0;
+}
+
+.a2 #l1 {
+	opacity: 0.5;
+}
+
+.a2 #l2 {
+	opacity: 1;
+}
+
+.a2 #l3 {
+	opacity: 0.5;
+}
+
+.a2 #l4 {
+	opacity: 0.2;
+}
+
+.a2 #l5 {
+	opacity: 0.1;
+}
+
+.a3 #l1 {
+	opacity: 0.2;
+}
+
+.a3 #l2 {
+	opacity: 0.5;
+}
+
+.a3 #l3 {
+	opacity: 1;
+}
+
+.a3 #l4 {
+	opacity: 0.5;
+}
+
+.a3 #l5 {
+	opacity: 0.2;
+}
+
+.a4 #l1 {
+	opacity: 0.1;
+}
+
+.a4 #l2 {
+	opacity: 0.2;
+}
+
+.a4 #l3 {
+	opacity: 0.5;
+}
+
+.a4 #l4 {
+	opacity: 1;
+}
+
+.a4 #l5 {
+	opacity: 0.5;
+}
+
+.a5 #l1 {
+	opacity: 0;
+}
+
+.a5 #l2 {
+	opacity: 0.1;
+}
+
+.a5 #l3 {
+	opacity: 0.2;
+}
+
+.a5 #l4 {
+	opacity: 0.5;
+}
+
+.a5 #l5 {
+	opacity: 1;
+}
+
+.a2 #acti {
+	top: 24px;
+}
+
+.a3 #acti {
+	top: 48px;
+}
+
+.a4 #acti {
+	top: 72px;
+}
+
+.a5 #acti {
+	top: 96px;
+}
+
+
+/* Clearfix For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* Clearfix For IE 6/7 (trigger hasLayout) */
+.cf {
+    *zoom:1;
+}
+
+
+/* responsive */
+
+/* Smaller App images / macbook breakpoint ----------- */
+@media only screen 
+and (max-width : 1460px) {
+
+	#topLogo {
+		margin: -9px 0 0 -32px;
+		width: 64px;
+		height: 16px;
+		background-image: url(img/shadow_logo_small.gif);
+	}
+	
+	#secAppfunc1 .appImg, #secAppfunc1.sticky .appImg {
+		background-image: url(img/shadow_iphone5_01-med.png);
+	}
+	
+	#secAppfunc2 .appImg {
+		background-image: url(img/shadow_iphone5_02-med.png);
+	}
+	
+	#secAppfunc3 .appImg {
+		background-image: url(img/shadow_iphone5_03-med.png);
+	}
+	
+	#secAppfunc4 .appImg {
+		background-image: url(img/shadow_iphone5_04-med.png);
+	}
+	
+	#secAppfunc5 .appImg {
+		background-image: url(img/shadow_iphone5_05-med.png);
+	}
+	
+	#secAppfunc6 .appImg, #secAppfunc6.sticky .appImg {
+		background-image: url(img/shadow_iphone5_06-med.png);
+	}
+
+}
+
+
+/* Medium screens ----------- */
+@media only screen 
+and (max-width : 1280px) {
+
+	body {
+		font-size: 16px;
+	}
+	
+}
+
+
+/* Small screens / mobile ----------- */
+@media only screen 
+and (max-width : 767px) {
+
+	body {
+		font-size: 14px;
+	}
+		
+	#formWrapper {
+		width: 220px;
+	}
+	
+	input.input {
+		width: 90px;
+	}
+	
+	input.button {
+		padding: 2px;
+	}
+	
+	#formWrapper.focused input.input {
+		width: 90px;
+	}
+	
+	#formWrapper.focused {
+		width: 220px;
+	}
+	
+}
+
+/* no rollover for touch devices  ----------- */
+@media only screen 
+and (max-width : 1024px) {
+		
+		
+}
+
+
+
+/* animation */
+
+
+.show {
+	opacity: 0;
+	transition: 				all 1s ease-in-out;
+	-webkit-transition: 		all 1s ease-in-out;
+	-moz-transition: 			all 1s ease-in-out;
+	-o-transition: 				all 1s ease-in-out;
+	transition-delay: 			0.15s;
+	-moz-transition-delay: 		0.15s;
+	-webkit-transition-delay: 	0.15s;
+	-o-transition-delay: 		0.15s;
+}
+
+.inView .show {
+	opacity: 1;
+}
+
+.delay {
+	transition-delay: 			0.3s;
+	-moz-transition-delay: 		0.3s;
+	-webkit-transition-delay: 	0.3s;
+	-o-transition-delay: 		0.3s;
+}
+
+/*
+
+.show1, .show2, .show3, .show4, .showFull, .showBottom {
+	opacity: 0;
+	transition: 				all 0.5s ease-in-out;
+	-webkit-transition: 		all 0.5s ease-in-out;
+	-moz-transition: 			all 0.5s ease-in-out;
+	-o-transition: 				all 0.5s ease-in-out;
+	transition-delay: 			0s;
+	-moz-transition-delay: 		0s;
+	-webkit-transition-delay: 	0s;
+	-o-transition-delay: 		0s;
+}
+
+.showP, .showPF {
+	padding-top: 25px;
+}
+
+.inView .showP,
+.bottomView .showP,
+.fullView .showPF {
+	padding-top: 0px;
+}
+
+.inView .show1,
+.bottomView .show1 {
+	opacity: 1;
+	transition-delay: 			0s;
+	-moz-transition-delay: 		0s;
+	-webkit-transition-delay: 	0s;
+	-o-transition-delay: 		0s; 
+}
+
+.inView .show2,
+.bottomView .show2 {
+	opacity: 1;
+	transition-delay: 			0.25s;
+	-moz-transition-delay: 		0.25s;
+	-webkit-transition-delay: 	0.25s;
+	-o-transition-delay: 		0.25s; 
+}
+
+.inView .show3,
+.bottomView .show3 {
+	opacity: 1;
+	transition-delay: 			0.5s;
+	-moz-transition-delay: 		0.5s;
+	-webkit-transition-delay: 	0.5s;
+	-o-transition-delay: 		0.5s; 
+}
+
+.inView .show4,
+.bottomView .show4 {
+	opacity: 1;
+	transition-delay: 			0.75s;
+	-moz-transition-delay: 		0.75s;
+	-webkit-transition-delay: 	0.75s;
+	-o-transition-delay: 		0.75s; 
+}
+
+.bottomView .showFull,
+.fullView .showFull {
+	opacity: 1;
+}
+*/

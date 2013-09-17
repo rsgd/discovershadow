@@ -1,0 +1,1744 @@
+	/* shadow 
+autor: Raffael Stueken
+*/
+
+
+/* COMMON STYLES START */
+
+html, a, div, select, input { outline: none; }
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	color: #141414;
+	text-align: center;
+	background-color: #fff;
+	overflow-y: scroll;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body.loading {
+}
+
+img, iframe, input {
+	border:none;
+}
+
+a {
+	color: #141414;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #e95948;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 auto 1em auto;
+}
+
+/* setup */
+
+#wrapper {
+	margin: 50px;
+	background: #222;
+}
+
+#borderTop, #borderBottom {
+	width: 100%;
+	height: 50px;
+	background: #fff;
+	position: fixed;
+	top: 0;
+}
+
+#borderBottom {
+	bottom: 0;
+	top: auto;
+}
+
+/* top logo */
+
+#topLogo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -13px 0 0 -48px;
+	width: 96px;
+	height: 24px;
+	opacity: 0;
+	cursor: pointer;
+	background: url(img/shadow_logo.gif) center center no-repeat;
+	transition: 			opacity 0.8s ease-in-out;
+	-webkit-transition: 	opacity 0.8s ease-in-out;
+	-moz-transition: 		opacity 0.8s ease-in-out;
+	-o-transition: 			opacity 0.8s ease-in-out;
+}
+
+body.content #topLogo,
+body.subPage #topLogo {
+	opacity: 1;
+}
+
+
+/* section */
+
+section {
+	background: #222;
+	height: 600px;
+	position: relative;
+	cursor: pointer;
+}
+
+.sectionWrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.sectionContent {
+	padding-top: 50px;
+	position: relative;
+}
+
+.bottomContent {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 100px;
+}
+
+.backImg, .backImg img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.full {
+	height: 900px;
+}
+
+.startFull {
+	height: 1200px;
+}
+
+.static .sectionWrapper {
+	padding-top: 200px;
+}
+
+.staticSmall {
+	height: 400px;
+}
+
+.staticSmall .sectionWrapper {
+	padding-top: 120px;
+}
+
+.leftContent, .rightContent {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.rightContent {
+	float: right;
+}
+
+.bottomSpace {
+	margin-bottom: 200px;
+}
+
+h1 {
+	color: #fff;
+	margin: -40px 0 0.2em 0;
+	font-size: 3.6em;
+	line-height: 1.1em;
+	letter-spacing: 0.03em;
+	font-weight: normal;
+	position: relative;
+	text-transform: uppercase;
+}
+
+h3, h4 {
+	margin: 0 0 0.2em 0;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+h4 {
+	font-size: 0.875em;
+}
+
+p.big {
+	font-size: 1.375em;
+	line-height: 1.35em;
+	letter-spacing: 0.5px;
+}
+
+p.small {
+	font-size: 0.875em;
+	line-height: 1.35em;
+	letter-spacing: 0.25px;
+}
+
+p.upperCase {
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+p.centered {
+	margin-top: 160px;
+}
+
+
+/* content sec1 */
+/* logo */
+
+#secStart {
+	cursor: default;
+}
+
+#splashHead {
+	margin-top: 30%;
+}
+
+#scrollDown {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 200px;
+    margin: -110px 0 0 -100px;
+    cursor: pointer;
+	transition: 			all 0.25s ease-in-out;
+	-webkit-transition: 	all 0.25s ease-in-out;
+	-moz-transition: 		all 0.25s ease-in-out;
+	-o-transition: 			all 0.25s ease-in-out;
+}
+
+#scrollDown #tNotice {
+    opacity: 0;
+    color: #c7c2b6;
+    font-size: 0.625em;
+    letter-spacing: 0.15em;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;	
+	transition: 			all 0.5s ease-in-out;
+	-webkit-transition: 	all 0.5s ease-in-out;
+	-moz-transition: 		all 0.5s ease-in-out;
+	-o-transition: 			all 0.5s ease-in-out;
+}
+
+#scrollDown:hover #tNotice {
+	opacity: 1;
+}
+
+#scrollDown #iNotice {
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    width: 38px;
+    height: 38px;
+    border-radius: 20px;
+    margin: 0 0 0 -20px;
+    border: 1px solid #c7c2b6;
+    background: url("img/shadow_sprite.png") no-repeat center -121px;
+	transition: 			all 0.35s ease-in-out;
+	-webkit-transition: 	all 0.35s ease-in-out;
+	-moz-transition: 		all 0.35s ease-in-out;
+	-o-transition: 			all 0.35s ease-in-out;
+}
+
+#scrollDown:hover #iNotice {
+    background: #c7c2b6 url("img/shadow_sprite.png") no-repeat center -81px;
+}
+
+body.scrolled #scrollDown {
+	top: 120px;
+	opacity: 0;
+}
+
+#secStart p, #secStart h3 {
+	color: #e95948;
+}
+
+#clouds {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+#cloud1, #cloud2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 75%;
+	width: 700px;
+	height: 700px;
+}
+
+#cloud2 {
+	position: absolute;
+	bottom: 0;
+	left: auto;
+	right: 0;
+}
+
+#clouds img {
+	width: 700px;
+	height: 700px;
+}
+
+
+/* content problem */
+
+#secProblem {
+	background: transparent;
+	color: #fff;
+}
+
+#secProblem h3 {
+	margin-top: -80px;
+}
+
+
+#secProblem p {
+	color: #c7c2b6;
+	max-width: 420px;
+}
+
+#secProblem .appIcon {
+	background: url(img/shadow_dream.png) center center no-repeat;
+	left: 50%;
+	height: 150px;
+	width: 440px;
+	top: auto;
+	bottom: 0;
+	margin: 0 0 80px -220px; 
+}
+
+
+/* content app */
+
+#secAppimg {
+	color: #fff;
+	background: #ff5842 url(img/shadow_app_01.jpg) center center no-repeat fixed;
+	background-size: cover;
+}
+
+body.subPage #secAppimg {
+	cursor: default;
+}
+
+#secAppimg h3.logo {
+	font-size: 2.6em;
+	margin: 0;
+	letter-spacing: 0;
+	margin-top: -80px;
+}
+
+body.subPage #secAppimg h3.logo {
+	margin-top: -190px;
+}
+
+#secAppimg p {
+	/* color: #c7c2b6; */
+	max-width: 760px;
+}
+
+#secAppimg .appIcon {
+	background: url(img/shadow_function_icons.png) center center no-repeat;
+	left: 50%;
+	height: 80px;
+	width: 300px;
+	top: auto;
+	bottom: 0;
+	margin: 0 0 0px -150px; 
+}
+
+/* content App img */
+
+.secAppfunc {
+	color: #c7c2b6;
+}
+
+.secAppfunc p {
+	width: 320px;
+}
+
+.secAppfunc .sectionContent {
+	padding-top: 0;
+}
+
+.secAppfunc .leftContent, .secAppfunc .rightContent {
+	width: 40%;
+	margin-top: 200px;
+	height: auto;
+}
+
+.secAppfunc .leftContent h4, .secAppfunc .rightContent h4 {
+	margin-top: -100px;
+}
+
+.appImg, .appIcon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.appIcon {
+	width: 80px;
+}
+
+body.webkit .appIcon { /* prevent bug */
+	opacity: 1 !important;
+}
+
+
+/* start app */
+
+#secAppfunc1 .appImg {
+	background: #222 url(img/shadow_iphone5_01-big.png) center center no-repeat;
+}
+
+#secAppfunc1.sticky .appImg {
+	background: #222 url(img/shadow_iphone5_01-big.png) center center no-repeat fixed;
+}
+
+#secAppfunc1 .rightContent {
+	width: 50%;
+}
+
+#secAppfunc1 .rightContent #appIcon {
+	height: 80px;
+	width: 100%;
+	margin-top: -60px;
+	background: url(img/shadow_app_icon.png) center center no-repeat;	
+}
+
+#secAppfunc1 p {
+	margin-top: -50px;
+}
+
+/* wake up */
+
+#secAppfunc2 {
+	background: #f0f0f0;
+	color: #141414;
+}
+
+#secAppfunc2 .appImg {
+	background: url(img/shadow_iphone5_02-big.png) center center no-repeat fixed;
+}
+
+#secAppfunc2 .appIcon {
+	background: url(img/shadow_alarm_icons.png) center center no-repeat;
+	left: 20%;
+	height: 80px;
+	width: 300px;
+	top: 50%;
+	margin: -110px 0 0 -150px; 
+}
+
+/* record */
+
+#secAppfunc3 .appImg {
+	background: url(img/shadow_iphone5_03-big.png) center center no-repeat fixed;
+}
+
+#secAppfunc3 .appIcon {
+	background: url(img/shadow_record.png) center center no-repeat;
+	left: auto;
+	right: 20%;
+	height: 80px;
+	width: 420px;
+	top: 50%;
+	margin: -100px -210px; 
+}
+
+/* explore */
+
+#secAppfunc4 {
+	color: #141414;
+	background: #f0f0f0;
+}
+
+#secAppfunc4 .appImg {
+	background: transparent url(img/shadow_iphone5_04-big.png) center center no-repeat fixed;
+}
+
+#secAppfunc4 .appIcon {
+	background: url(img/shadow_sleep_track.png) center center no-repeat;
+	left: 0%;
+	height: 388px;
+	width: 480px;
+	top: 50%;
+	margin-top: -200px; 
+}
+
+/* text */
+
+#secAppfunc5 .appImg {
+	background: #222 url(img/shadow_iphone5_05-big.png) center center no-repeat fixed;
+}
+
+/* stats */
+
+#secAppfunc6 .appImg {
+	background: url(img/shadow_iphone5_06-big.png) center center no-repeat fixed;
+}
+
+#secAppfunc6.sticky .appImg {
+	background: url(img/shadow_iphone5_06-big.png) center center no-repeat;
+}
+
+#secAppfunc6 .appIcon {
+	background: url(img/shadow_stats.png) center center no-repeat;
+	left: auto;
+	right: 20%;
+	height: 170px;
+	width: 360px;
+	top: 50%;
+	margin: -140px -180px; 
+}
+
+/* invite */
+
+#secInvite {
+	cursor: default;
+	color: #c7c2b6;
+}
+
+#secInvite .appImg {	
+	background: url(img/shadow_back_3.jpg) top center no-repeat fixed;
+	opacity: 0.08;
+}
+
+#secInvite .sectionContent {
+	padding: 0;
+}
+
+#secInvite h4 {
+	margin-top: -20px;
+	color: #fff;
+}
+
+#secInvite p {
+	max-width: 600px;
+}
+
+#secInvite .bottomContent p.small {
+	color: #57595c;
+	width: 440px;
+	max-width: 80%;
+	transition: 			all 0.25s ease-in-out;
+	-webkit-transition: 	all 0.25s ease-in-out;
+	-moz-transition: 		all 0.25s ease-in-out;
+	-o-transition: 			all 0.25s ease-in-out;
+}
+
+#secInvite .bottomContent h4 {
+	color: #57595c;
+	font-size: 0.75em;
+	border: 1px solid #3b3d3f;
+	width: 46px;
+	height: 46px;
+	line-height: 47px;
+	border-radius: 24px;
+	margin: 0 auto 10px;
+	transition: 			all 0.25s ease-in-out;
+	-webkit-transition: 	all 0.25s ease-in-out;
+	-moz-transition: 		all 0.25s ease-in-out;
+	-o-transition: 			all 0.25s ease-in-out;
+}
+
+#secInvite .bottomContent:hover h4 {
+	color: #c7c2b6;
+}
+
+#secInvite .bottomContent:hover p.small {
+	color: #c7c2b6;
+}
+
+
+/* subscribe */
+
+#subscribe {
+	position: absolute;
+	bottom: 15%;
+	left: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.indicates-required, label {
+	display: none;
+}
+
+#formWrapper {
+	background: #292929;
+	border-radius: 3px;
+	width: 340px;
+	max-width: 80%;
+	margin: 0 auto;
+	border: 1px solid #3b3d3f;
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.08);
+	transition: 			width 0.25s ease-in-out;
+	-webkit-transition: 	width 0.25s ease-in-out;
+	-moz-transition: 		width 0.25s ease-in-out;
+	-o-transition: 			width 0.25s ease-in-out;
+}
+
+.error #formWrapper {
+	border: 1px solid #e95948;	
+}
+
+input {
+	font-size: 1em;
+	background: transparent;
+	margin: 0;
+	font-family: inherit;
+	vertical-align: middle;
+}
+
+input.input {
+	width: 180px;
+	padding: 10px;
+	height: 20px;
+	color: #707070;
+	transition: 			width 0.25s ease-in-out;
+	-webkit-transition: 	width 0.25s ease-in-out;
+	-moz-transition: 		width 0.25s ease-in-out;
+	-o-transition: 			width 0.25s ease-in-out;
+}
+
+input.button, button.button {
+	font-size: 0.8125em;
+	padding: 5px 10px;
+	text-align: center;
+	margin: 5px;
+	background: #313131;
+	border-radius: 2px;
+	border: none;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #fff;
+	letter-spacing: 1px;
+	transition: 			all 0.25s ease-in-out;
+	-webkit-transition: 	all 0.25s ease-in-out;
+	-moz-transition: 		all 0.25s ease-in-out;
+	-o-transition: 			all 0.25s ease-in-out;
+}
+
+#formWrapper.focused {
+	width: 400px;
+	max-width: 80%;
+}
+
+#formWrapper.focused input.input {
+	width: 240px;
+	color: #fff;
+}
+
+input.button:hover, button.button:hover {
+	background: #e95948;
+}
+
+#formWrapper .field {
+	float: left;
+}
+
+#formWrapper .submit {
+	float: right;
+}
+
+#result {
+	color: #c7c2b6;
+	font-size: 0.875em;
+    letter-spacing: 0.25px;
+    line-height: 1.35em;
+    margin: 20px auto;
+    max-width: 440px; 
+    padding: 0 20px;
+    display: none;
+}
+
+#result a {
+	color: #c7c2b6;
+}
+
+#result a:hover, .error #result {
+	color: #e95948;
+}
+
+/* credits */
+
+#secCredits {
+	cursor: default;
+	height: 160px;
+	height: 55px; /* without social media links */
+	background: #1c1c1c;
+}
+
+#secCredits .sectionContent {
+    padding-top: 35px;
+	padding-top: 20px; /* without social media links */
+}
+
+body.subPage #secCredits {
+	height: 180px;
+}
+
+body.subPage #secCredits .sectionContent {
+    padding-top: 25px;
+}
+
+#invite {
+	bottom: 280px;
+	text-align: center;
+}
+
+body.subPage a.button {
+	display: inline-block;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 2px;
+    letter-spacing: 2px;
+    padding: 0.9em 3em;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+	transition: 			0.25s ease-in-out;
+	-webkit-transition: 	0.25s ease-in-out;
+	-moz-transition: 		0.25s ease-in-out;
+	-o-transition: 			0.25s ease-in-out;
+}
+
+body.subPage .button:hover {
+	background: #fff;
+	color: #e88074;
+}
+
+#links {
+	text-align: center;
+	height: 80px;
+	position: relative;
+}
+
+.links a {
+	display: inline-block;
+	margin: 0 0.5em 30px;
+	font-size: 0.75em;
+	color: #57595c;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;	
+	border: 1px solid #353739;
+	width: 40px;
+	height: 40px;
+	border-radius: 21px;	
+}
+
+.links a span {
+	display: inline-block;
+	text-indent: -9999px;
+	margin: 10px;
+	width: 20px;
+	height: 20px;	
+	background: transparent url(img/shadow_sprite.png) center top no-repeat;	
+	transition: 			all 0.25s ease-in-out;
+	-webkit-transition: 	all 0.25s ease-in-out;
+	-moz-transition: 		all 0.25s ease-in-out;
+	-o-transition: 			all 0.25s ease-in-out;	
+}
+
+a#videoIcon {
+	background: #94ca4b;
+	border: 1px solid #8bbf47;
+}
+
+a#facebookIcon {
+	background: #4b70bd;
+	border: 1px solid #4769b3;
+}
+
+a#twitterIcon {
+	background: #4d9cd6;
+	border: 1px solid #4996cc;
+}
+
+body.no-touch .links a#facebook:hover span {
+	background: transparent url(img/shadow_sprite.png) center -20px no-repeat;
+}
+
+.links a#tumblr span {
+	background: transparent url(img/shadow_sprite.png) center -40px no-repeat;
+}
+
+body.no-touch .links a#tumblr:hover span {
+	background: transparent url(img/shadow_sprite.png) center -60px no-repeat;
+}
+
+.links a#videoIcon span {
+	background: transparent url(img/shadow_sprite.png) center -160px no-repeat;
+}
+
+body.no-touch .links .actionBox:hover a#videoIcon span {
+	background: transparent url(img/shadow_sprite.png) center -180px no-repeat;
+}
+
+.links a#facebookIcon span {
+	background: transparent url(img/shadow_sprite.png) center -200px no-repeat;
+}
+
+body.no-touch .links .actionBox:hover a#facebookIcon span {
+	background: transparent url(img/shadow_sprite.png) center -220px no-repeat;
+}
+
+.links a#twitterIcon span {
+	background: transparent url(img/shadow_sprite.png) center -240px no-repeat;
+}
+
+body.no-touch .links .actionBox:hover a#twitterIcon span {
+	background: transparent url(img/shadow_sprite.png) center -260px no-repeat;
+}
+
+#links h4 {
+    color: #57595C;
+    font-size: 0.75em;
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    margin-left: -150px;
+    display: none;
+}
+
+#copyRight {
+	color: #57595c;
+	font-size: 0.5em;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+body.subPage #copyRight {
+	padding-top: 20px;
+}
+
+
+/* menu */
+
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menu {
+	margin: 0;
+	height: 100%;
+	position: relative;
+	opacity: 0;
+	transition: 			all 0.8s ease-in-out;
+	-webkit-transition: 	all 0.8s ease-in-out;
+	-moz-transition: 		all 0.8s ease-in-out;
+	-o-transition: 			all 0.8s ease-in-out;
+}
+
+body.scrolled #menu {
+	opacity: 1;
+}
+
+#menu ul {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -20px 0 0 -90px;
+}
+
+#menu li {
+	float: left;
+	display: inline-block;
+	height: 38px;
+	width: 180px;
+}
+
+#menu li a {
+	display: block;
+	line-height: 24px;
+	text-align: center;
+	font-size: 0.625em;
+	line-height: 35px;	
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	border: 1px solid #ddd;
+	background: #fff;
+	border-radius: 2px;
+	transition: 			all 0.25s ease-in-out;
+	-webkit-transition: 	all 0.25s ease-in-out;
+	-moz-transition: 		all 0.25s ease-in-out;
+	-o-transition: 			all 0.25s ease-in-out;
+}
+
+#menu li a:hover {
+	border: 1px solid #e88074;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+}
+
+body.scrolling #invite a {
+	color: #e95948;
+	border: 1px solid #e88074;
+}
+
+
+/* navigation */
+
+.naviHook {
+	height: 1px;
+	margin-bottom: -1px;
+	position: relative;
+}
+
+#nav {
+	position: fixed;
+	right: 2.5%;
+	top: 50%;
+	margin: -100px -4px 0 0;
+	opacity: 0;
+	transition: 			all 0.8s ease-in-out;
+	-webkit-transition: 	all 0.8s ease-in-out;
+	-moz-transition: 		all 0.8s ease-in-out;
+	-o-transition: 			all 0.8s ease-in-out;
+}
+
+body.scrolled #nav {
+	opacity: 1;
+}
+
+#acti {
+	position: absolute;
+	top: 0px;
+	right: -3px;
+	margin-top: 6px;
+	width: 10px;
+	height: 10px;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+	transition: 			all 0.5s ease-in-out;
+	-webkit-transition: 	all 0.5s ease-in-out;
+	-moz-transition: 		all 0.5s ease-in-out;
+	-o-transition: 			all 0.5s ease-in-out;
+}
+
+#nav ul {
+	position: relative;
+	padding-left: 20px;
+	transition: 			all 0.3s ease-in-out;
+	-webkit-transition: 	all 0.3s ease-in-out;
+	-moz-transition: 		all 0.3s ease-in-out;
+	-o-transition: 			all 0.3s ease-in-out;
+}
+
+#nav li {
+	height: 24px;
+	cursor: pointer;
+	position: relative;
+	width: 140px;
+	transition: 			all 0.5s ease-in-out;
+	-webkit-transition: 	all 0.5s ease-in-out;
+	-moz-transition: 		all 0.5s ease-in-out;
+	-o-transition: 			all 0.5s ease-in-out;
+}
+
+#nav li span {
+	display: block;
+	float: right;
+}
+
+#nav li .linkText {
+	opacity: 0;
+	overflow: hidden;
+	width: 0;
+	position: absolute;
+	top:1px;
+	right: -6px;
+	text-align: center;
+	font-size: 0.625em;
+	padding: 5px 10px;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	/*margin-right: 30px;*/
+	color: #141414;
+}
+
+#nav li .linkDot {
+	background: #000;
+	margin-top: 9px;
+	height: 6px;
+	width: 6px;
+	border-radius: 3px;
+	position: relative;
+}
+
+#nav ul:hover li {
+	/* width: 140px; */
+	opacity: 1 !important;
+}
+
+#nav li:hover .linkText {
+	opacity: 1;
+	/*margin-right: 20px;*/
+	width: 130px;
+	background: #fff;
+	display: block;
+	border-radius: 2px;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+	transition: 			opacity 0.5s ease-in-out;
+	-webkit-transition: 	opacity 0.5s ease-in-out;
+	-moz-transition: 		opacity 0.5s ease-in-out;
+	-o-transition: 			opacity 0.5s ease-in-out;
+}
+
+.a1 #l2 {
+	opacity: 0.5;
+}
+
+.a1 #l3 {
+	opacity: 0.2;
+}
+
+.a1 #l4 {
+	opacity: 0.1;
+}
+
+.a1 #l5 {
+	opacity: 0;
+}
+
+.a2 #l1 {
+	opacity: 0.5;
+}
+
+.a2 #l2 {
+	opacity: 1;
+}
+
+.a2 #l3 {
+	opacity: 0.5;
+}
+
+.a2 #l4 {
+	opacity: 0.2;
+}
+
+.a2 #l5 {
+	opacity: 0.1;
+}
+
+.a3 #l1 {
+	opacity: 0.2;
+}
+
+.a3 #l2 {
+	opacity: 0.5;
+}
+
+.a3 #l3 {
+	opacity: 1;
+}
+
+.a3 #l4 {
+	opacity: 0.5;
+}
+
+.a3 #l5 {
+	opacity: 0.2;
+}
+
+.a4 #l1 {
+	opacity: 0.1;
+}
+
+.a4 #l2 {
+	opacity: 0.2;
+}
+
+.a4 #l3 {
+	opacity: 0.5;
+}
+
+.a4 #l4 {
+	opacity: 1;
+}
+
+.a4 #l5 {
+	opacity: 0.5;
+}
+
+.a5 #l1 {
+	opacity: 0;
+}
+
+.a5 #l2 {
+	opacity: 0.1;
+}
+
+.a5 #l3 {
+	opacity: 0.2;
+}
+
+.a5 #l4 {
+	opacity: 0.5;
+}
+
+.a5 #l5 {
+	opacity: 1;
+}
+
+.a2 #acti {
+	top: 24px;
+}
+
+.a3 #acti {
+	top: 48px;
+}
+
+.a4 #acti {
+	top: 72px;
+}
+
+.a5 #acti {
+	top: 96px;
+}
+
+
+/* Clearfix For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* Clearfix For IE 6/7 (trigger hasLayout) */
+.cf {
+    *zoom:1;
+}
+
+
+/* animation */
+
+
+.show {
+	opacity: 0;
+	transition: 				all 1s ease-in-out;
+	-webkit-transition: 		all 1s ease-in-out;
+	-moz-transition: 			all 1s ease-in-out;
+	-o-transition: 				all 1s ease-in-out;
+	transition-delay: 			0.15s;
+	-moz-transition-delay: 		0.15s;
+	-webkit-transition-delay: 	0.15s;
+	-o-transition-delay: 		0.15s;
+}
+
+.inView .show {
+	opacity: 1;
+}
+
+.delay {
+	transition-delay: 			0.3s;
+	-moz-transition-delay: 		0.3s;
+	-webkit-transition-delay: 	0.3s;
+	-o-transition-delay: 		0.3s;
+}
+
+
+/* subpages */
+
+
+body.statusPage #secAppimg {
+	background: #272726;
+	color: #c7c2b6;
+	height: auto;
+}
+
+body.statusPage #secAppimg .appImg {
+	background: url(img/shadow_back_3.jpg) top center no-repeat fixed;
+	opacity: 0.08;
+}
+
+body.statusPage #secAppimg h3.logo  {
+	margin-top: 0;
+}
+
+body.statusPage h4,
+body.statusPage p.big {
+	color: #fff;
+}
+
+body.statusPage p.highlight {
+	color: #c7c2b6;
+}
+
+body.statusPage a.button {
+	margin-bottom: 80px;
+	color: #e95948;
+	border: 1px solid #e95948;
+}
+
+body.statusPage a.button:hover {
+	color: #fff;
+	background: #e95948;
+}
+
+
+/* video */
+
+#video {
+	margin: 0 auto 30px auto;
+	width: 960px;
+	height: 540px;
+	border: 12px solid #000;
+	background: #1c1c1c;
+	box-shadow: 1px 1px 6px rgba(0,0,0,0.3);	
+}
+
+iframe {
+	position: relative;
+}
+
+/* like */
+
+#likes {
+	width: 840px;
+	margin: 30px auto 80px;
+}
+
+.like {
+	width: 110px;
+	height: 130px;
+	float: left;
+	padding: 5px;
+}
+
+.likeHead {
+	height: 40px;
+}
+
+/* share boxes */
+
+#shareHead {
+	margin-top: 60px;
+}
+
+#shareAction {
+	width: 660px;
+	margin: 60px auto 20px auto;
+}
+
+.actionBox {
+	float: left;
+	background: #1c1c1c;
+	border-radius: 2px;
+	width: 190px;
+	padding: 10px;
+	margin: 5px; 
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);	
+	cursor: pointer;
+	transition: 			0.25s ease-in-out;
+	-webkit-transition: 	0.25s ease-in-out;
+	-moz-transition: 		0.25s ease-in-out;
+	-o-transition: 			0.25s ease-in-out;
+}
+
+body.no-touch .actionBox:hover {
+	float: left;
+	background: #171717;
+	box-shadow: 1px 1px 6px rgba(0,0,0,0.5);	
+	cursor: pointer;
+}
+
+.actionBox:active {
+	margin: 8px 5px 2px 5px;
+	transition: 			0.1s ease-in-out;
+	-webkit-transition: 	0.1s ease-in-out;
+	-moz-transition: 		0.1s ease-in-out;
+	-o-transition: 			0.1s ease-in-out;
+}
+
+.shareNumber {
+	color: #57595c;
+	font-size: 1.6em;
+	padding: 10px 0 15px 0;
+}
+
+#progress {
+	width: 450px;
+	margin: 0 auto 80px auto;
+	text-align: left;
+}
+
+#progressBar {
+	background: #1c1c1c;
+}
+
+#progressBar div {
+	width: 0;
+	height: 2px;
+	background: #1c1c1c;
+	transition: 			0.75s ease-in-out;
+	-webkit-transition: 	0.75s ease-in-out;
+	-moz-transition: 		0.75s ease-in-out;
+	-o-transition: 			0.75s ease-in-out;
+}
+
+#progressCount {
+	transition: 			0.75s ease-in-out;
+	-webkit-transition: 	0.75s ease-in-out;
+	-moz-transition: 		0.75s ease-in-out;
+	-o-transition: 			0.75s ease-in-out;
+}
+
+#progressCount div {
+	margin: 0 0 8px 2px;
+	transition: 			0.75s ease-in-out;
+	-webkit-transition: 	0.75s ease-in-out;
+	-moz-transition: 		0.75s ease-in-out;
+	-o-transition: 			0.75s ease-in-out;
+}
+
+body.p33 #progressCount {
+	margin-left: 33%;
+}
+
+body.p33 #progressCount div {
+	margin-left: -1.5em;
+}
+
+body.p33 #progressBar div {
+	width: 33%;
+	background: #e95948;
+}
+
+body.p66 #progressCount {
+	margin-left: 66%;
+}
+
+body.p66 #progressBar div {
+	width: 66%;
+}
+
+body.p100 #progressCount {
+	margin-left: 100%;
+}
+
+body.p100 #progressBar div {
+	width: 100%;
+	background: #c7c2b6;
+}
+
+body.p100 #progressCount div {
+	margin-left: -2em;
+}
+
+/* responsive */
+
+/* touch devices */
+
+body.touch .show {
+	opacity: 1;
+}
+
+body.touch .appImg {
+	background-attachment: scroll !important;
+}
+
+body.touch #nav {
+	display: none;
+}
+
+body.touch #topLogo {
+	opacity: 1;
+}
+
+body.touch #secAppimg {
+    background-attachment: scroll;
+    background-size: 1600px 1000px;
+    background-repeat: repeat;
+}
+
+body.touch .bottomSpace {
+    margin-bottom: 0px;
+}
+
+body.touch #secInvite .appImg {
+   display: none;
+}
+
+body.touch #scrollDown {
+	opacity: 0;
+}
+
+
+
+/* Smaller App images / macbook breakpoint ----------- */
+@media only screen 
+and (max-width : 1460px) {
+
+	#topLogo {
+		margin: -9px 0 0 -32px;
+		width: 64px;
+		height: 16px;
+		background-image: url(img/shadow_logo.gif);
+		background-size: 64px 16px;
+	}
+	
+	#secAppfunc1 .appImg, #secAppfunc1.sticky .appImg {
+		background-image: url(img/shadow_iphone5_01-med.png);
+	}
+	
+	#secAppfunc2 .appImg {
+		background-image: url(img/shadow_iphone5_02-med.png);
+	}
+	
+	#secAppfunc3 .appImg {
+		background-image: url(img/shadow_iphone5_03-med.png);
+	}
+	
+	#secAppfunc4 .appImg {
+		background-image: url(img/shadow_iphone5_04-med.png);
+	}
+	
+	#secAppfunc5 .appImg {
+		background-image: url(img/shadow_iphone5_05-med.png);
+	}
+	
+	#secAppfunc6 .appImg, #secAppfunc6.sticky .appImg {
+		background-image: url(img/shadow_iphone5_06-med.png);
+	}
+
+}
+
+/* Medium screens ----------- */
+@media only screen 
+and (max-width : 1280px) {
+
+	body {
+		font-size: 16px;
+	}
+	
+	#secAppimg p {
+    	max-width: 740px;
+	}
+	
+	.secAppfunc p {
+    	width: 220px;
+	}
+	
+	#secAppfunc4 .appIcon {
+    	left: -90px;
+	}
+	
+	#secAppfunc6 .appIcon {
+		background-size: 300px 142px;
+	}
+	
+	#secInvite p {
+    	max-width: 500px;
+	}
+	
+	#video {
+		width: 600px;
+		height: 338px;
+		border: 10px solid #000;	
+	}
+	
+	#likes {
+		width: 480px;
+	}
+	
+	#like5 {
+		margin-left: 60px;
+	}
+	
+}
+
+/* medium screens / mobile ----------- */
+@media only screen 
+and (max-width : 840px) {
+
+	body {
+		font-size: 14px;
+	}
+	
+	h1 {
+		max-width: 400px;
+		margin: -40px auto 0.2em;
+	}
+	
+	#topLogo {
+		margin: -7px 0 0 -24px;
+		width: 48px;
+		height: 12px;
+		background-image: url(img/shadow_logo.gif);
+		background-size: 48px 12px;
+	}
+		
+	#secAppimg p {
+    	max-width: 600px;
+	}
+	
+	#menu ul {
+    	margin: -15px 0 0 -70px;
+	}
+
+	#menu li {
+    	height: 30px;
+		width: 140px;
+	}
+	
+	#menu li a {
+    	line-height: 27px;
+	}
+	
+	.appImg {
+		background-attachment: scroll !important;
+	}
+		
+	.secAppfunc .appIcon {
+    	display: none;
+	}
+	
+	.secAppfunc .leftContent, 
+	.secAppfunc .rightContent {
+		width: 60%;
+	}
+	
+	.leftApp {
+		width: 60%;
+	}
+	
+	.rightApp {
+		width: 60%;
+		left: 40%;
+	}
+	
+	#secAppfunc1 .rightContent {
+		display: none;
+	}		
+	
+	#video {
+		width: 480px;
+		height: 270px;
+		margin: 0 auto 20px auto;
+	}
+	
+	#shareAction {
+		width: 480px;
+	}
+	
+	.actionBox {
+		width: 450px;
+		position: relative;
+		padding-top: 20px;
+	}
+	
+	.actionBox a {
+		margin-bottom: 10px;
+	}
+	
+	.shareNumber {
+		position: absolute;
+		top: 5px;
+		left: 20px;
+		font-size: 1.2em;
+	}
+	
+	#progress {
+		width: 400px;
+	}
+		
+}
+
+/* Small screens / mobile ----------- */
+@media only screen 
+and (max-width : 570px) {
+
+	body {
+		font-size: 12px;
+	}
+	
+	h1 {
+		margin-top: 10px;
+		font-size: 2em;
+	}
+	
+	p {
+    	max-width: 240px !important;
+	}
+	
+	body.touch #secAppimg {
+   		background-size: 832px 520px;
+	}
+	
+	.appIcon {
+    	display: none;
+	}
+	
+	.secAppfunc .sectionContent {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.secAppfunc .leftContent, 
+	.secAppfunc .rightContent {
+		width: 100%;
+		float: none;
+		position: absolute;
+		margin-top: 0 !important;
+		bottom: 10px;
+		left: 0;
+	}
+	
+	.leftApp {
+		width: 100%;
+	}
+	
+	.rightApp {
+		width: 100%;
+		left: 0;
+	}
+	
+	.appImg {
+		height: 80%;
+		min-height: 340px;
+		background-size: 176px 300px !important;
+	}
+	
+	#secInvite .appImg,
+	body.subPage #secAppimg .appImg {
+		background-size: cover !important;
+	}
+	
+	#secInvite .bottomContent {
+		display: none;
+	}
+	
+	#secInvite .appImg {
+		background: none;
+	}	
+	
+	#video {
+		width: 400px;
+		height: 225px;	
+		margin: 0 auto 20px auto;
+	}
+	
+	#likes {
+		width: 360px;
+	}
+	
+	#like5 {
+		margin-left: 0;
+	}
+	
+	#like7 {
+		margin-left: 120px;
+	}
+	
+	#shareHead {
+		margin-top: 40px;
+	}
+	
+	#shareAction {
+		width: 400px;
+		margin-bottom: 80px;
+	}
+	
+	.actionBox {
+		width: 370px;
+	}
+	
+	#progress {
+		display: none;
+	}
+
+}
+
+/* Small screens / mobile ----------- */
+@media only screen 
+and (max-width : 480px) {
+
+	#formWrapper .submit {
+	    float: none;
+	}
+	
+	#formWrapper {
+    	max-width: 200px;
+    	width: 200px;
+	}
+	
+	input.button, button.button {
+		width: 180px;
+		margin-bottom: 10px;
+	}
+	
+	#video {
+		width: 240px;
+		height: 135px;	
+	}
+	
+	#likes {
+		width: 240px;
+	}
+	
+	#like7 {
+		margin-left: 60px;
+	}
+	
+	#shareHead {
+		margin-top: 20px;
+	}
+	
+	#shareAction {
+		width: 240px;
+	}
+	
+	.actionBox {
+		width: 210px;
+	}
+
+}
+
+
+/* removing trust ----------- */
+@media only screen 
+and (max-height : 550px) {
+
+	#secInvite .bottomContent {
+		display: none !important;
+	}
+
+}
+
+
+
+

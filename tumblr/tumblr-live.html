@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+
+<title>{Title}{block:PostTitle} - {PostTitle}{/block:PostTitle}{block:PostSummary} - {PostSummary}{/block:PostSummary}</title>
+<meta name="description" content="{block:Description}{MetaDescription}{/block:Description}"/>
+
+<meta http-equiv="cleartype" content="on">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="http://discovershadow.com/tumblr/tumblr.css">
+
+<script type="text/javascript" src="//use.typekit.net/ioj7lsp.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://discovershadow.com/tumblr/js/jquery-1.7.2.min.js"><\/script>')</script>
+<script>document.write('<link rel="stylesheet" href="http://discovershadow.com/tumblr/tumblr-js.css"><\/script>')</script>
+<script src="http://discovershadow.com/tumblr/js/plugins.js"></script>
+<script src="http://discovershadow.com/tumblr/js/my-tumblr.js"></script>
+
+<link rel="shortcut icon" href="{Favicon}">
+
+<!-- google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38522502-2', 'tumblr.com');
+  ga('send', 'pageview');
+
+</script>
+<!-- END google analytics -->
+
+</head>
+
+{block:IndexPage}
+<body class="frontPage">
+{/block:IndexPage}	
+{block:PermalinkPage}
+<body class="postPage">
+{/block:PermalinkPage}
+
+{block:IndexPage}
+
+<div id="back">
+
+	<img src="http://discovershadow.com/tumblr/img/stars.jpg" alt="shadow" class="back" />
+	
+	<h1>	
+	    <a href="/">
+	    	<img src="http://discovershadow.com/tumblr/img/shadow_logo_tumblr.png" alt="shadow" />
+	    </a>
+	</h1>
+	
+</div>
+
+<div id="wrapper">	
+
+	<div id="logo">
+		<a href="/">
+			<img src="http://discovershadow.com/tumblr/img/shadow_logo_tumblr_small.png" alt="shadow" />
+		</a>
+	</div>
+	
+	<div id="button">
+	    <a class="headline" id="homeLinkBig" href="http://www.discovershadow.com" target="_blank">Remember your dreams</a>
+	</div>
+		
+	<div id="menu">
+	    	    
+	    <!-- navi-->
+	    <div id="nav">
+	    	<div id="navInner">    		
+	    		
+	    		{block:HasPages}
+	    			{block:Pages}<a class="navButton pageNavButton" href="{URL}">{Label}</a>{/block:Pages}
+	    		{/block:HasPages}	    	
+	    			
+	    		<a class="navButton" id="homeLink" href="http://www.discovershadow.com" target="_blank">Request Invite</a>
+	    		
+	    		<a class="navButton" href="/archive">Archive</a>
+	    		
+	    	</div>
+	    
+	    </div>	
+	
+	</div> <!-- /menu -->		
+	
+	
+	<div id="content">
+		{block:Posts}
+				
+			{block:Photo}
+			<div class="post not_audio" id="post-{PostID}">
+				
+				<input type="hidden" name="rel" value="{ReblogURL}"/>				
+					
+				<div class="postWrapper">
+				    	
+				    <a class="imgLink" href="{Permalink}">
+				    	<img class="notPhotoset" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+				    </a>
+				    
+				    <input type="hidden" name="hiresImg" value="{PhotoURL-HighRes}"/>						
+				    
+				    <div class="postOptions">
+				    	<a href="{ReblogURL}" class="button reblogTumblr"><span>Reblog this on tumblr</span></a>
+				    	<a href="{ReblogURL}" class="button likeTumblr"><span>Like this on tumblr</span></a>
+				    	<a href="http://www.facebook.com/sharer.php?u={Permalink}" class="button shareFacebook"><span>Share this on facebook</span></a>
+				    	<a href="http://twitter.com/home?status={Permalink}" class="button tweetThis"><span>Tweet this</span></a>
+				    </div>		    
+				    
+				</div> <!-- /postWrapper-->
+				
+			</div>  <!-- /post -->
+			
+			{/block:Photo}
+			
+			{block:Quote}
+			
+			<div class="post type_text type_quote" id="post-{PostID}">
+				
+				<input type="hidden" name="rel" value="{ReblogURL}"/>
+									
+				<div class="postWrapper">
+				    
+				    <div class="textPost textPostBody">
+				    	<p><a class="texLink" href="{Permalink}"><span class="quoteSign">&raquo;</span>{Quote}&laquo;</a></p>
+				    </div>
+				    
+				    <div class="textPost textPostHead headline">
+				    	{block:Source} <h3>&#8212; {Source}</h3>{/block:Source} 
+				    </div>		
+				    
+				    <div class="postOptions">
+				    	<a href="{ReblogURL}" class="button reblogTumblr"><span>Reblog this on tumblr</span></a>
+				    	<a href="{ReblogURL}" class="button likeTumblr"><span>Like this on tumblr</span></a>
+				    	<a href="http://www.facebook.com/sharer.php?u={Permalink}" class="button shareFacebook"><span>Share this on facebook</span></a>
+				    	<a href="http://twitter.com/home?status=Currently looking at {Permalink}" class="button tweetThis"><span>Tweet this</span></a>
+				    </div>			    
+				    
+				</div> <!-- /postWrapper-->
+				
+			</div> 
+			
+			{/block:Quote}
+			
+			{block:Text}
+			
+			<div class="post type_text" id="post-{PostID}">
+				
+				<input type="hidden" name="rel" value="{ReblogURL}"/>				
+					
+				<div class="postWrapper">	
+				    
+				    <div class="textPost textPostHead headline">
+				    	<h3>{Title}</h3>
+				    </div>
+				    
+				    <div class="textPost textPostBody">
+				    	<a class="texLink" href="{Permalink}">
+				    	{Body}	
+				    	</a>
+				    </div>			
+				    
+				    <div class="postOptions">
+				    	<a href="{ReblogURL}" class="button reblogTumblr"><span>Reblog this on tumblr</span></a>
+				    	<a href="{ReblogURL}" class="button likeTumblr"><span>Like this on tumblr</span></a>
+				    	<a href="http://www.facebook.com/sharer.php?u={Permalink}" class="button shareFacebook"><span>Share this on facebook</span></a>
+				    	<a href="http://twitter.com/home?status={Permalink}" class="button tweetThis"><span>Tweet this</span></a>
+				    </div>		    
+				    
+				</div> <!-- /postWrapper-->
+				
+			</div>  <!-- /post -->
+			
+			{/block:Text}
+
+			
+		{/block:Posts}		
+				
+	</div> <!-- /content -->	
+		    
+	{block:Pagination} 
+	
+	<!-- N.B. If Infinite scrolling is turned off (i.e. iPad) -->
+	<div id="infinite_scroll">
+	    {block:PreviousPage}<a href="{PreviousPage}" class="prev navButton" title="{lang:Newer posts}">←</a>{/block:PreviousPage}
+	    {block:NextPage}<a href="{NextPage}" class="next navButton" title="{lang:Older posts}">→</a>{/block:NextPage}
+	</div>
+	
+
+	
+	{/block:Pagination}	
+
+</div>
+
+<!-- end frontpage -->
+	
+{/block:IndexPage}	
+	
+	
+	
+{block:Posts}	
+{block:PermalinkPage}
+	
+	<!-- start permalink page -->
+	
+<div id="pageWrapper">	
+
+	<div id="logo">
+		<a href="/">
+			<img src="http://discovershadow.com/tumblr/img/shadow_logo_tumblr_small.png" alt="shadow" />
+		</a>
+	</div>
+	
+	<div id="page">
+	
+		<div id="pageContent">
+		
+			{block:Photo}
+			<div class="post notAudio imagePost" id="post-{PostID}">
+			    <img class="notPhotoset" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+			</div>
+			{/block:Photo}
+			
+			{block:Text}
+			<div class="post notAudio textPost" id="post-{PostID}">			
+			    {block:Title}
+			    <div class="textPost textPostHead postTextTitle headline">
+					<h3>{Title}</h3>
+				</div>
+			    {/block:Title}
+			    <div class="postTextBody">
+			    {Body}
+			    </div>
+			</div>
+			{/block:Text}
+			
+			{block:Quote}				
+			<div class="post notAudio textPost quotePost" id="post-{PostID}">
+			    <div class="postTextBody textPost textPostBody">
+			    	<p><span class="quoteSign">&raquo;</span>{Quote}&laquo;</p>
+			    </div>		    
+				{block:Source}
+				<div class="textPost textPostHead headline">
+				    <h3>{Source}</h3>
+				</div>		
+				{/block:Source}
+			</div>			
+			{/block:Quote}
+			
+			<input type="hidden" name="rel" value="{ReblogURL}" class="hiddenLink" />				
+				    
+			<div class="postOptions pagePostOptions">
+			    <a href="{ReblogURL}" class="button reblogTumblr"><span>Reblog this on tumblr</span></a>
+			    <a href="{ReblogURL}" class="button likeTumblr"><span>Like this on tumblr</span></a>
+			    <a href="http://www.facebook.com/sharer.php?u={Permalink}" class="button shareFacebook"><span>Share this on facebook</span></a>
+			    <a href="http://twitter.com/home?status={Permalink}" class="button tweetThis"><span>Tweet this</span></a>
+			</div>			
+		
+			<div id="postNotes">
+			
+				<ol class="notes secondNotes">
+				
+					{block:HasTags}
+					<li class="notesTag">						
+						{block:Tags}
+						<span class="action notes_tag_title_case">
+						    <a class="notesTagButton" href="{TagURL}">{Tag}</a>
+						</span>
+						{/block:Tags}										
+					</li>					
+					{/block:HasTags}	
+					
+					{block:RebloggedFrom}
+					<li class="notesRebloged">						
+						<span class="action">
+						    <a class="notesViaButton typeSource" href="{ReblogParentURL}">via: {ReblogParentName}</a>
+						</span>						
+					</li>
+					{/block:RebloggedFrom} 	
+					
+					{block:ContentSource}					
+					<li class="notesSource">						
+						<span class="action">
+						    <a class="notesViaButton typeSource" href="{SourceURL}" title="{SourceTitle}">source: {SourceTitle}</a>
+						</span>											
+					</li>
+					{/block:ContentSource}	
+					
+				</ol>
+				
+				{block:PostNotes}
+					{PostNotes}
+				{/block:PostNotes}
+				
+				{block:Date}
+				<ol class="notes dateNotes">
+					<li class="notesDate">
+						<span class="notesDateSpan">{DayOfWeek}, {MonthNumberWithZero}/{DayOfMonthWithZero}/{Year}</span>
+					</li>
+				</ol>
+				{/block:Date}
+		
+			</div>
+		
+		</div>
+		
+	</div>
+	
+</div>	
+		
+<!-- end permalink page -->
+		
+{/block:PermalinkPage}
+{/block:Posts}
+
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.raffaelstueken.de/piwik/" : "http://www.raffaelstueken.de/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 24);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.raffaelstueken.de/piwik/piwik.php?idsite=24" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+
+</html>

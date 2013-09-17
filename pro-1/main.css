@@ -1,0 +1,295 @@
+/* shadow 
+autor: Raffael Stueken
+*/
+
+
+/* COMMON STYLES START */
+
+html, a, div, select, input { outline: none; }
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color:#000;
+	text-align: center;
+	background-color: #090909;
+}
+
+body.loading {
+	background: #090909 url(img/loader.gif) no-repeat 40px 40px;
+}
+
+img, iframe, input {
+	border:none;
+}
+
+img {
+	image-rendering: optimizeSpeed;
+}
+
+/* main */
+
+h1 {
+	width: 380px;
+	height: 180px;
+	border: 20px solid #fff;
+	border-radius: 1px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -110px 0 0 -210px;
+	line-height: 180px;
+}
+
+
+h1 a {
+	text-indent: -9999px;
+	background: url(img/shadow_logo.png) left top no-repeat;
+	color:#000;
+	text-decoration:none;
+	display: block;	
+	transition: 		background 0.3s ease-out;
+	-webkit-transition: background 0.3s ease-out;
+	-moz-transition: 	background 0.3s ease-out;
+}
+
+h1 a:hover {
+	background: #333 url(img/shadow_logo.png) left top no-repeat;
+}
+
+/* section */
+
+section {
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: relative;
+}
+
+.sectionWrapper {
+	padding-top: 100px;
+}
+
+#sec2 {
+	color: #fff;
+	background: url(img/shadow_back_01.jpg) center center no-repeat fixed;
+	background-size: cover;
+}
+
+#sec3 {
+	background: #222 url(img/shadow_iphone5_06.png) 25% center no-repeat;
+}
+
+#sec4 {
+	color: #fff;
+	background: url(img/shadow_back_02.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+#sec5 {
+	background: #ddd;
+}
+
+
+/* Clearfix For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* Clearfix For IE 6/7 (trigger hasLayout) */
+.cf {
+    *zoom:1;
+}
+
+.fLeft {
+	float: left;
+}
+
+
+/* wrapper */
+
+#back {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #000;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+#back img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* subscribe */
+
+p {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 auto 1em auto;
+	width: 400px;
+	max-width: 80%;
+}
+
+#subscribe {
+	position: absolute;
+	bottom: 15%;
+	left: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.indicates-required, label {
+	display: none;
+}
+
+#formWrapper {
+	background: #f3f3f3;
+	border-radius: 3px;
+	width: 260px;
+	max-width: 80%;
+	margin: 0 auto;
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+	transition: 			width 0.25s ease-in-out;
+	-webkit-transition: 	width 0.25s ease-in-out;
+	-moz-transition: 		width 0.25s ease-in-out;
+	-o-transition: 			width 0.25s ease-in-out;
+}
+
+input {
+	font-size: 0.8125em;
+	background: transparent;
+	margin: 0;
+	font-family: inherit;
+	vertical-align: middle;
+}
+
+input.input {
+	width: 130px;
+	padding: 5px 10px;
+	height: 20px;
+	color: #707070;
+	transition: 			width 0.25s ease-in-out;
+	-webkit-transition: 	width 0.25s ease-in-out;
+	-moz-transition: 		width 0.25s ease-in-out;
+	-o-transition: 			width 0.25s ease-in-out;
+}
+
+input.button {
+	padding: 0 2px;
+	text-align: center;
+	margin: 4px;
+	background: #313131;
+	border: 1px solid #212121;
+	border-radius: 2px;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+#formWrapper.focused input.input {
+	width: 200px;
+	color: #000;
+}
+
+#formWrapper.focused {
+	width: 340px;
+	max-width: 80%;
+}
+
+input.button:hover {
+	background: #e95948;
+	border: 1px solid #d75344;
+}
+
+#formWrapper .field {
+	float: left;
+}
+
+#formWrapper .submit {
+	float: right;
+}
+
+#links {
+	text-align: center;
+}
+
+#links a {
+	display: inline-block;
+	padding: 0.8em 0.5em;
+	font-size: 0.8125em;
+	color: #000;
+	text-decoration: none;
+}
+
+#links a:hover {
+	color: #e95948;
+}
+
+
+/* Small screens / mobile ----------- */
+@media only screen 
+and (max-width : 767px) {
+
+	body {
+		font-size: 14px;
+	}
+	
+	h1 {
+		width: 190px;
+		height: 90px;
+		margin: -55px 0 0 -105px;
+	}	
+	
+	h1 a {
+		background-size: 190px 90px;
+	}
+	
+	#formWrapper {
+		width: 220px;
+	}
+	
+	input.input {
+		width: 90px;
+	}
+	
+	input.button {
+		padding: 2px;
+	}
+	
+	#formWrapper.focused input.input {
+		width: 90px;
+	}
+	
+	#formWrapper.focused {
+		width: 220px;
+	}
+	
+}
+
+/* no rollover for touch devices  ----------- */
+@media only screen 
+and (max-width : 1024px) {
+		
+	h1 a:hover {
+		background: url(img/shadow_logo.png) left top no-repeat;
+	}
+		
+}
+

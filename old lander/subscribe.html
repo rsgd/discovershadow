@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- /ht Paul Irish - http://front.ie/j5OMXi -->
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<title>SHADOW | Community of Dreamers</title>
+
+<meta name="AUTHOR" content="" />
+<meta name="DESCRIPTION" content="Community of dreamers" />
+<meta name="ROBOTS" content="index, follow" />
+
+<!-- /ht Andy Clarke - http://front.ie/lkCwyf -->
+<meta http-equiv="cleartype" content="on">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="main.css">
+
+<script type="text/javascript" src="//use.typekit.net/ioj7lsp.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+<script>document.write('<link rel="stylesheet" href="js.css"><\/script>')</script>
+<script src="js/script.js"></script>
+
+
+</head>
+
+
+<body>
+
+<script>
+$( document ).ready(function() {
+
+alert("here");
+/* attach a submit handler to the form */
+$("#mc-embedded-subscribe").click(function(event) {
+
+alert("Here");
+  /* stop form from submitting normally */
+  event.preventDefault();
+
+  /*clear result div*/
+   //$("#result").html('');
+
+  /* get some values from elements on the page: */
+   //var values = $(this).serialize();
+   var token = "7da2acda5c7545d507202758b4535293";
+   var email = $("#mce-EMAIL").val();
+
+   alert("token = "+token+"; email="+email);
+  /* Send the data using post and put the results in a div */
+    $.ajax({
+      url: "http://ec2-23-20-86-22.compute-1.amazonaws.com/2.0/user/registerbeta",
+      type: "post",
+      data: '{"email"=email,"token"=token}',
+      success: function(data){
+          alert("success:"+data.user_id);
+           //$("#result").html('submitted successfully');
+      },
+      error:function(){
+          alert("failure");
+          //$("#result").html('there is error while submit');
+      }   
+    }); 
+});
+
+});
+</script>
+
+
+<div id="back">
+	<img src="img/stars.jpg" alt="shadow" />
+</div>
+
+<h1>
+	<a href="mailto:you@discovershadow.com">SHADOW</a>
+</h1>
+
+<div id="subscribe">
+
+	<p>
+		We are building our alpha right now. Get early access
+		and approach the next step of your dream consciousness.
+	</p>
+	
+	
+	<!-- Begin MailChimp Signup Form -->
+	<form action="http://COM.us6.list-manage.com/subscribe/post?u=4b7dee36f6feff146fca3f17c&amp;id=010df46968" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+		
+		<div id="formWrapper" class="cf">
+		
+			<div class="mc-field-group field">
+				<label for="mce-EMAIL">
+					Email Address  <span class="asterisk">*</span>
+				</label>
+				<input type="email" value="Your email address" name="EMAIL" class="required email input" id="mce-EMAIL">
+			</div>
+			
+			<div class="clear submit">
+				<input type="submit" value="request invite" name="subscribe" id="mc-embedded-subscribe" class="button headline">
+			</div>
+		
+		</div>
+			
+		<div id="mce-responses" class="clear">
+			<div class="response" id="mce-error-response" style="display:none"></div>
+			<div class="response" id="mce-success-response" style="display:none"></div>
+		</div>	
+		
+		<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+		
+	</form>	
+	<!--End mc_embed_signup-->
+	
+	<div id="links">
+		<a href="http://discovershadow.tumblr.com/">Tumblr</a>
+		<a href="https://www.facebook.com/discovershadow">Facebook</a>		
+	</div>
+
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.raffaelstueken.de/piwik/" : "http://www.raffaelstueken.de/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 22);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.raffaelstueken.de/piwik/piwik.php?idsite=22" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+
+</html>

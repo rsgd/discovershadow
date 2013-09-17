@@ -1,0 +1,28 @@
+/* shadow js styles
+autor: Raffael Stueken
+*/
+
+/* main */
+
+html.loading body, html.loading {
+	height: 100%;
+}
+
+html.loading #wrapper {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	height: 100%;
+	background: #222;
+}
+
+html.loading body.delay #wrapper {
+	background: #222 url(img/loader.gif) center center no-repeat;
+}
+
+html.loading #wrapperInner,
+html.loading #scrollDown,
+html.loading #secStart h1,
+html.loading .backImg img {
+	display: none;
+}
+

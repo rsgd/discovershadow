@@ -1,0 +1,4 @@
+AuthName "secure"
+AuthType Basic
+AuthUserFile /nfs/c05/h01/mnt/72501/domains/discovershadow.com/html/investors/.htpasswd
+require valid-user

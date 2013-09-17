@@ -1,0 +1,9 @@
+/* shadow js styles
+autor: Raffael Stueken
+*/
+
+/* main */
+
+h1, #back img, #subscribe {
+	display: none;
+}
