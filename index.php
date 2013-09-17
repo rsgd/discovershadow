@@ -212,6 +212,19 @@
 				<div class="appImg"></div>
 				<div class="sectionContent show">
 				
+					<p class="big">
+						&#8220;A dream you dream alone is only a dream. A dream you dream together is reality.&#8221; &#8211;&nbsp;John&nbsp;Lennon
+					</p>
+					
+					<h3 class="logo headline">
+						We are live on Kickstarter
+					</h3>	
+				
+					<a href="http://www.kickstarter.com/projects/hunterleesoik/shadow-community-of-dreamers" target="_blank" class="button headline">
+					    Contribute now
+					</a>
+									
+					<!--
 					<h4 class="headline">
 						Join us
 					</h4>	
@@ -221,9 +234,9 @@
 					</p>
 					
 					
-					<!-- Begin MailChimp Signup Form -->
+					<!-- Begin MailChimp Signup Form 
 							
-                    <form action="/subscribe.php" id="getInvolved" method="POST">
+          <form action="/subscribe.php" id="getInvolved" method="POST">
 					
 					    <div id="formWrapper" class="cf">
 					    
@@ -242,10 +255,11 @@
 					<div id="result">
 					</div>	
 			
-					<!--End MailChimp Signup Form -->				
+					<!--End MailChimp Signup Form -->			
 					
 				</div>		
 				
+				<!--
 				<div class="bottomContent show">
 					
 					<h4 class="headline">
@@ -257,6 +271,8 @@
 					</p>								
 					
 				</div>
+				-->
+				
 			</div>
 		</section>			
 		
@@ -283,7 +299,7 @@
 		<li id="l2" class="cf"><span class="linkText">Problem</span><span class="linkDot"></span></li>
 		<li id="l3" class="cf"><span class="linkText">Solution</span><span class="linkDot"></span></li>
 		<li id="l4" class="cf"><span class="linkText">How it works</span><span class="linkDot"></span></li>
-		<li id="l5" class="cf"><span class="linkText">Request Invite</span><span class="linkDot"></span></li>		
+		<li id="l5" class="cf"><span class="linkText">Contribute now</span><span class="linkDot"></span></li>		
 	</ul>
 
 </div>
@@ -302,7 +318,7 @@
 
 	<div id="menu" class="cf">		
 		<ul class="cf">
-			<li id="invite"><a href="#">Request Invite</a></li>	
+			<li id="invite"><a href="http://www.kickstarter.com/projects/hunterleesoik/shadow-community-of-dreamers" target="_blank">Contribute now</a></li>	
 		</ul>	
 	</div>
 

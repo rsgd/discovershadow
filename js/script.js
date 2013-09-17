@@ -428,11 +428,11 @@ function initNavi() {
     		}
     		$body.scrollTo(navS,800,"easeInOutQuad");
     	});
-    	$('#invite a').click(function() {
-    		$nav.attr("class", "").addClass('a5');
-    		$body.scrollTo('#hook5',1200,"easeInOutQuad");
-    		return false;
-    	});    
+    	//	$('#invite a').click(function() {
+    	//		$nav.attr("class", "").addClass('a5');
+    	//		$body.scrollTo('#hook5',1200,"easeInOutQuad");
+    	//		return false;
+    	//	});    
     	$('section').not("#secInvite,#secCredits").click(function() {
     		$body.scrollTo($(this).next(),600,"easeInOutQuad");
     	});    
@@ -445,10 +445,10 @@ function initNavi() {
     	});
     
     } else {
-    	$('#invite a').click(function() {
-    		$body.scrollTo('#secInvite',1200,"easeInOutQuad");
-    		return false;
-    	}); 
+    	//	$('#invite a').click(function() {
+    	//		$body.scrollTo('#secInvite',1200,"easeInOutQuad");
+    	//		return false;
+    	//	}); 
     }
     
     if($body.hasClass("touch")) {
