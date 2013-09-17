@@ -1243,15 +1243,21 @@ iframe {
 /* like */
 
 #likes {
-	width: 840px;
+	width: 880px;
 	margin: 30px auto 80px;
+	text-align: center;
 }
 
 .like {
 	width: 110px;
 	height: 130px;
-	float: left;
+	display: inline-block;
 	padding: 5px;
+}
+
+.like div {
+	display: inline-block;
+	width: 100%;
 }
 
 .likeHead {
@@ -1487,11 +1493,7 @@ and (max-width : 1280px) {
 	}
 	
 	#likes {
-		width: 480px;
-	}
-	
-	#like5 {
-		margin-left: 60px;
+		width: 500px;
 	}
 	
 }
@@ -1671,15 +1673,7 @@ and (max-width : 570px) {
 	}
 	
 	#likes {
-		width: 360px;
-	}
-	
-	#like5 {
-		margin-left: 0;
-	}
-	
-	#like7 {
-		margin-left: 120px;
+		width: 400px;
 	}
 	
 	#shareHead {
@@ -1725,11 +1719,7 @@ and (max-width : 480px) {
 	}
 	
 	#likes {
-		width: 240px;
-	}
-	
-	#like7 {
-		margin-left: 60px;
+		width: 280px;
 	}
 	
 	#shareHead {

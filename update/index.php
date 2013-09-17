@@ -70,37 +70,37 @@
 						
 						<div id="likes" class="cf">
 						
-						    <div id="like1" class="like">
+						    <div class="like">
 						        <div class="likeHead">Fan Page</div>
 						        <div class="fb-like" data-href="http://facebook.com/discovershadow" data-send="false" data-layout="box_count"></div>
 						    </div>
 						    
-						    <div id="like2" class="like">
+						    <div class="like">
 						        <div class="likeHead">Salon</div>
 						        <div class="fb-like" data-href="http://www.salon.com/2012/12/10/artisinal_water_filtration_is_now_a_thing/" data-send="false" data-layout="box_count"></div>
 						    </div>
 						    
-						    <div id="like3" class="like">
+						    <div class="like">
 						        <div class="likeHead">Fast Co.</div>
 						        <div class="fb-like" data-href="http://www.fastcoexist.com/1681025/forget-brita-building-a-better-water-filter#1" data-send="false" data-layout="box_count"></div>
 						    </div>
 						    
-						    <div id="like4" class="like">
+						    <div class="like">
 						        <div class="likeHead">Thrillist</div>
 						        <div class="fb-like" data-href="http://www.thrillist.com/node/2975590?reftype=pcl&referer=2973083" data-send="false" data-layout="box_count"></div>
 						    </div>
 						    
-						    <div id="like5" class="like">
+						    <div class="like">
 						        <div class="likeHead">Huff. Post</div>
 						        <div class="fb-like" data-href="http://www.huffingtonpost.com/max-lugavere/a-new-water-filter-both-a_b_2265243.html" data-send="false" data-layout="box_count"></div>
 						    </div>
 						    
-						    <div id="like6" class="like">
+						    <div class="like">
 						        <div class="likeHead">Mashable</div>
 						        <div class="fb-like" data-href="http://mashable.com/2012/12/11/soma/" data-send="false" data-layout="box_count"></div>
 						    </div>
 						    
-						    <div id="like7" class="like">
+						    <div class="like">
 						        <div class="likeHead">Greatist</div>
 						        <div class="fb-like" data-href="http://greatist.com/health/news-soma-water-filter-121112/" data-send="false" data-layout="box_count"></div>
 						    </div>
