@@ -62,12 +62,12 @@
 					-->
 					
 					<h4 id="shareHead" class="headline">
-						Hey there, Rockstar!
+						Hello dreamer!
 					</h4>
 										
 					<p class="highlight big">
-						We hope you’re having an awesome day. You’re here because we know you have influence. When you share something, people pay attention. So, please take a few seconds to spread the SHADOW love. 
-					</p>	
+						You may say I&rsquo;m a dreamer, but I&rsquo;m not the only one. When you share something, people pay attention. So, please take a few seconds to spread the SHADOW love.
+						</p>	
 					
 					<p class="highlight upperCase">
 						Thanks so much

@@ -75,100 +75,98 @@
 						
 						    <div class="like">
 						        <div class="likeHead"><a href="http://facebook.com/discovershadow" target="_blank">Fan Page</a></div>
-						        <div class="fb-like" data-href="http://facebook.com/discovershadow" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://facebook.com/discovershadow" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://www.nbcnews.com/science/its-new-yawn-app-wants-find-out-what-world-dreams-4B11185863" target="_blank">NBC News</a></div>
-						        <div class="fb-like" data-href="http://www.nbcnews.com/science/its-new-yawn-app-wants-find-out-what-world-dreams-4B11185863" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://www.nbcnews.com/science/its-new-yawn-app-wants-find-out-what-world-dreams-4B11185863" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://www.theatlantic.com/technology/archive/2013/09/an-app-to-build-a-database-of-the-worlds-dreams/279753/" target="_blank">The Atlantic</a></div>
-						        <div class="fb-like" data-href="http://www.theatlantic.com/technology/archive/2013/09/an-app-to-build-a-database-of-the-worlds-dreams/279753/" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://www.theatlantic.com/technology/archive/2013/09/an-app-to-build-a-database-of-the-worlds-dreams/279753/" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://www.fastcompany.com/3017631/tech-forecast/can-this-alarm-clock-app-unlock-the-mysteries-of-the-worlds-dreams" target="_blank">Fast Company</a></div>
-						        <div class="fb-like" data-href="http://www.fastcompany.com/3017631/tech-forecast/can-this-alarm-clock-app-unlock-the-mysteries-of-the-worlds-dreams" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://www.fastcompany.com/3017631/tech-forecast/can-this-alarm-clock-app-unlock-the-mysteries-of-the-worlds-dreams" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://www.psfk.com/2013/09/dream-capture-app.html" target="_blank">psfk</a></div>
-						        <div class="fb-like" data-href="http://www.psfk.com/2013/09/dream-capture-app.html" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://www.psfk.com/2013/09/dream-capture-app.html" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://abcnews.go.com/Technology/shadow-dream-app-raise-money-remember-dreams/story?id=20281112" target="_blank">ABC News</a></div>
-						        <div class="fb-like" data-href="http://abcnews.go.com/Technology/shadow-dream-app-raise-money-remember-dreams/story?id=20281112" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://abcnews.go.com/Technology/shadow-dream-app-raise-money-remember-dreams/story?id=20281112" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://www.core77.com/blog/technology/shadow_the_app_that_helps_you_remember_your_dreams_25559.asp" target="_blank">core77</a></div>
-						        <div class="fb-like" data-href="http://www.core77.com/blog/technology/shadow_the_app_that_helps_you_remember_your_dreams_25559.asp" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://www.core77.com/blog/technology/shadow_the_app_that_helps_you_remember_your_dreams_25559.asp" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://www.forbes.com/sites/alextaub/2013/09/18/remember-your-dreams-with-shadow-a-social-dream-database/" target="_blank">Forbes</a></div>
-						        <div class="fb-like" data-href="http://www.forbes.com/sites/alextaub/2013/09/18/remember-your-dreams-with-shadow-a-social-dream-database/" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://www.forbes.com/sites/alextaub/2013/09/18/remember-your-dreams-with-shadow-a-social-dream-database/" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://hypebeast.com/2013/9/shadow-alarm-clock-and-dream-recording-app" target="_blank">Hypebeast</a></div>
-						        <div class="fb-like" data-href="http://hypebeast.com/2013/9/shadow-alarm-clock-and-dream-recording-app" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://hypebeast.com/2013/9/shadow-alarm-clock-and-dream-recording-app" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://venturebeat.com/2013/09/17/shadows-mobile-apps-gather-data-on-the-mysterious-world-of-dreams/" target="_blank">VentureBeat</a></div>
-						        <div class="fb-like" data-href="http://venturebeat.com/2013/09/17/shadows-mobile-apps-gather-data-on-the-mysterious-world-of-dreams/" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://venturebeat.com/2013/09/17/shadows-mobile-apps-gather-data-on-the-mysterious-world-of-dreams/" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://www.livescience.com/39699-shadow-app-records-dreams.html" target="_blank">livescience</a></div>
-						        <div class="fb-like" data-href="http://www.livescience.com/39699-shadow-app-records-dreams.html" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://www.livescience.com/39699-shadow-app-records-dreams.html" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://venturevillage.eu/shadow-dream-app" target="_blank">Venture Village</a></div>
-						        <div class="fb-like" data-href="http://venturevillage.eu/shadow-dream-app" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://venturevillage.eu/shadow-dream-app" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://www.wired.com/design/2013/09/shadow-a-beautiful-app-that-helps-you-remember-your-dreams/" target="_blank">wired</a></div>
-						        <div class="fb-like" data-href="http://www.wired.com/design/2013/09/shadow-a-beautiful-app-that-helps-you-remember-your-dreams/" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://www.wired.com/design/2013/09/shadow-a-beautiful-app-that-helps-you-remember-your-dreams/" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://thenextweb.com/apps/2013/09/17/shadow-launches-on-kickstarter-to-create-the-worlds-largest-dream-database/" target="_blank">The Next Web</a></div>
-						        <div class="fb-like" data-href="http://thenextweb.com/apps/2013/09/17/shadow-launches-on-kickstarter-to-create-the-worlds-largest-dream-database/" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://thenextweb.com/apps/2013/09/17/shadow-launches-on-kickstarter-to-create-the-worlds-largest-dream-database/" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>	
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://www.good.is/posts/why-i-m-building-a-community-of-dreamers" target="_blank">Good</a></div>
-						        <div class="fb-like" data-href="http://www.good.is/posts/why-i-m-building-a-community-of-dreamers" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://www.good.is/posts/why-i-m-building-a-community-of-dreamers" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>	
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://www.coolhunting.com/tech/shadow-community-of-dreamers.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+ch+(Cool+Hunting)" target="_blank">Cool Hunting</a></div>
-						        <div class="fb-like" data-href="http://www.coolhunting.com/tech/shadow-community-of-dreamers.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+ch+(Cool+Hunting)" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://www.coolhunting.com/tech/shadow-community-of-dreamers.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+ch+(Cool+Hunting)" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://www.businessinsider.com/dream-startup-shadow-kanye-west-2013-9" target="_blank">Business Insider</a></div>
-						        <div class="fb-like" data-href="http://www.businessinsider.com/dream-startup-shadow-kanye-west-2013-9" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://www.businessinsider.com/dream-startup-shadow-kanye-west-2013-9" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://articles.economictimes.indiatimes.com/2013-09-18/news/42182991_1_app-dreams-kickstarter" target="_blank">Economic Times</a></div>
-						        <div class="fb-like" data-href="http://articles.economictimes.indiatimes.com/2013-09-18/news/42182991_1_app-dreams-kickstarter" data-send="false" data-layout="box_count"></div>
+						        <div class="fb-like" data-href="http://articles.economictimes.indiatimes.com/2013-09-18/news/42182991_1_app-dreams-kickstarter" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
 						    </div>
 						    
 						    <div class="like">
 						        <div class="likeHead"><a href="http://www.heraldsun.com.au/technology/new-app-will-create-a-database-for-the-world8217s-dreams/story-fni0byfl-1226722139889" target="_blank">Herald Sun</a></div>
-						        <div class="fb-like" data-href="http://www.heraldsun.com.au/technology/new-app-will-create-a-database-for-the-world8217s-dreams/story-fni0byfl-1226722139889" data-send="false" data-layout="box_count"></div>
-						    </div>		
-						    
-						    	    
+						        <div class="fb-like" data-href="http://www.heraldsun.com.au/technology/new-app-will-create-a-database-for-the-world8217s-dreams/story-fni0byfl-1226722139889" data-send="false" data-colorscheme="dark" data-action="recommend"  data-layout="box_count"></div>
+						    </div>										
 						    
 						    
 						</div>
@@ -203,17 +201,18 @@
 
 <div id="borderBottom"></div>
 
-<div id="fb-root"></div>
 
-<script>
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=270058479685802";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=522666391155442";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 
 <!-- google analytics -->
 <script type="text/javascript">
