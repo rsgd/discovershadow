@@ -9,9 +9,10 @@
 
 <title>SHADOW | Community of Dreamers</title>
 
-<meta name="AUTHOR" content="" />
-<meta name="DESCRIPTION" content="SHADOW is an innovative alarm clock that helps you record and remember your dreams" />
-<meta name="ROBOTS" content="index, follow" />
+<meta name="author" content="Hunter Lee Soik, Raffael Stueken" />
+<meta name="description" content="SHADOW is an innovative alarm clock that helps you record and remember your dreams" />
+<meta name="robots" content="index, follow" />
+<meta name="designer" content="Raffael Stueken" />
 
 <!-- /ht Andy Clarke - http://front.ie/lkCwyf -->
 <meta http-equiv="cleartype" content="on">

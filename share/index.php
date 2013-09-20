@@ -9,9 +9,10 @@
 
 <title>SHADOW | Please support us with three clicks</title>
 
-<meta name="AUTHOR" content="" />
-<meta name="DESCRIPTION" content="Community of dreamers" />
-<meta name="ROBOTS" content="noindex, nofollow" />
+<meta name="author" content="Hunter Lee Soik, Raffael Stueken" />
+<meta name="description" content="Community of dreamers" />
+<meta name="robots" content="index, follow" />
+<meta name="designer" content="Raffael Stueken" />
 
 <!-- /ht Andy Clarke - http://front.ie/lkCwyf -->
 <meta http-equiv="cleartype" content="on">
