@@ -56,12 +56,12 @@
 					<p class="big highlight upperCase">
 						We&rsquo;re 66% there!
 					</p>	
-						
+					
 					<div id="video">
-						<iframe src="http://player.vimeo.com/video/68159227?title=0&byline=0&portrait=0&color=e64f3b" width="100%" height="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>						
+						<iframe src="http://player.vimeo.com/video/75000270?title=0&byline=0&portrait=0&color=e64f3b" width="100%" height="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>						
 					</div>
 						
-					<a href="http://bit.ly/shadow" class="button headline">
+					<a href="http://kck.st/15z9W7D" class="button headline">
 					    Back Shadow Now
 					</a>
 					
