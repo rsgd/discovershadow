@@ -159,11 +159,13 @@ $(document).ready(function(){
 		    window.open ('http://www.facebook.com/share.php?u=http://www.discovershadow.com', '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+topPos+', left='+leftPos);
 		    showProgress();
 		    
+		    return false;
+		    
 		});
 		
 		$('#twitterShare').on('click', function() {
-		    var loc = encodeURIComponent('http://www.discovershadow.com'),
-		    	titleTwit = "Shadow is awesome, guys",
+		    var loc = encodeURIComponent('http://kck.st/15z9W7D'),
+		    	titleTwit = "REMEMBER YOUR DREAMS",
 		        w = 580, h = 300,
 		    	leftPos = (winW/2)-(w/2),
 		    	topPos  = (winH/2)-(h/2);     
@@ -178,14 +180,18 @@ $(document).ready(function(){
 		    window.open('http://twitter.com/share?text=' + titleTwit + '&url=' + loc, '', 'height=' + h + ', width=' + w + ', top='+topPos +', left='+ leftPos +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
 		    showProgress();
 		    
+		    return false;
+		    
 		});
 		
 		$('#videoWatch').on('click', function() {
 		    showProgress();
 		    window.setTimeout(function(){
 		    	// window.location.href = "http://vimeo.com/68159227";
-		    	window.open('http://vimeo.com/68159227','_blank');	    	
+		    	window.open('http://kck.st/15z9W7D','_blank');	    	
 		    },500);
+		    
+		    return false;
 		    
 		});
 		
