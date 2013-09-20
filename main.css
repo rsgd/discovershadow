@@ -1262,7 +1262,7 @@ iframe {
 
 #likes {
 	width: 880px;
-	margin: 30px auto 80px;
+	margin: 30px auto 140px;
 	text-align: center;
 }
 
@@ -1291,6 +1291,10 @@ iframe {
 }
 
 /* share boxes */
+
+.statusPage #secAppimg p {
+    max-width: 720px;
+}
 
 #shareHead {
 	margin-top: 60px;
