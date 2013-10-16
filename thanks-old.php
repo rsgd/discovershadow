@@ -55,11 +55,10 @@
 						Thank you
 					</h3>
 					<p class="big highlight upperCase">
-						for becoming a SHADOW Ambassador. <br>
-						Get early access to the app by donating to kickstarter.
+						for requesting an invite. please check your email for more instructions.
 					</p>					
-					<a id="tellFriend" class="button headline" href="http://kck.st/15z9W7D">
-						Support the Kickstarter
+					<a id="tellFriend" class="button headline" href="mailto:Friends%20email%20here?subject=DISCOVER%20SHADOW&amp;BODY=REMEMBER%20YOUR%20DREAMS%20|%20WWW.DISCOVERSHADOW.COM">
+						Tell another Dreamer
 					</a> 
 				</div>
 				<div id="invite" class="sectionContent bottomContent">

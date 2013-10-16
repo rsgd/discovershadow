@@ -34,6 +34,10 @@ var topOff2 = 0;
 
 var countProgress = 0;
 
+var facebooked = 0;
+var twittered = 0;
+var tumblered = 0;
+
 
 $(document).ready(function(){
 		
@@ -136,14 +140,14 @@ $(document).ready(function(){
     	});
     	
     	is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
-    	if(is_chrome)  {
+    	if(is_chrome && !body.hasClass("ambassadorPage"))  {
     		$("#tellFriend").click(function() {
     			window.location.href = 'mailto:friends-email-here?subject=DISCOVER SHADOW - WWW.DISCOVERSHADOW.COM';
     			return false;
     		});
     	}
     	
-    	// share tool
+    // share tool
 		$('#facebookShare').on('click', function() {
 		    var w = 580, h = 300,
 		    	leftPos = (winW/2)-(w/2),
@@ -157,6 +161,7 @@ $(document).ready(function(){
 		    }      
 		    
 		    window.open ('http://www.facebook.com/share.php?u=http://www.discovershadow.com', '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+topPos+', left='+leftPos);
+
 		    showProgress();
 		    
 		    return false;
@@ -178,11 +183,80 @@ $(document).ready(function(){
 		    }  
 		    
 		    window.open('http://twitter.com/share?text=' + titleTwit + '&url=' + loc, '', 'height=' + h + ', width=' + w + ', top='+topPos +', left='+ leftPos +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+		    
 		    showProgress();
 		    
 		    return false;
 		    
 		});
+		
+		// share tool
+		$('#facebookShare2').on('click', function() {
+		    		    var w = 580, h = 300,
+		    	leftPos = (winW/2)-(w/2),
+		    	topPos  = (winH/2)-(h/2);      
+		    
+		    if(leftPos <= 0) {
+		        leftPos = 0;
+		    }         
+		    if(topPos <= 0) {
+		        topPos = 0;
+		    }      
+		    
+		    var faceWin = window.open ('http://www.facebook.com/share.php?u=http://www.discovershadow.com', '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+topPos+', left='+leftPos);
+		    facebooked = 1;
+		    supported(faceWin);
+		    
+		    return false;
+		    
+		});
+		
+		$('#twitterShare2').on('click', function() {
+		    var loc = encodeURIComponent('http://kck.st/15z9W7D'),
+		    	titleTwit = "REMEMBER YOUR DREAMS",
+		        w = 580, h = 300,
+		    	leftPos = (winW/2)-(w/2),
+		    	topPos  = (winH/2)-(h/2);     
+		    
+		    if(leftPos <= 0) {
+		        leftPos = 0;
+		    }         
+		    if(topPos <= 0) {
+		        topPos = 0;
+		    }  
+		    
+		    var twittWin = window.open('http://twitter.com/share?text=' + titleTwit + '&url=' + loc, '', 'height=' + h + ', width=' + w + ', top='+topPos +', left='+ leftPos +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+		    twittered = 1;
+		    supported(twittWin);
+		    
+		    return false;
+		    
+		});
+		
+		$('#tumblrShare2').on('click', function() {
+		    var w = 580, h = 450,
+		    	leftPos = (winW/2)-(w/2),
+		    	topPos  = (winH/2)-(h/2);      
+		    
+		    if(leftPos <= 0) {
+		        leftPos = 0;
+		    }         
+		    if(topPos <= 0) {
+		        topPos = 0;
+		    } 
+		    		    
+		    var tumblr_photo_source = "http://discovershadow.com/img/shadow_app_01.jpg";
+				var tumblr_photo_caption = "Remember your dreams";
+				var tumblr_photo_click_thru = "http://kck.st/15z9W7D";
+		    
+		    var tumblrWin = window.open("http://www.tumblr.com/share/photo?source=" + encodeURIComponent(tumblr_photo_source) + "&caption=" + encodeURIComponent(tumblr_photo_caption) + "&clickthru=" + encodeURIComponent(tumblr_photo_click_thru), '', 'height=' + h + ', width=' + w + ', top='+topPos +', left='+ leftPos +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+		    tumblred = 1;
+		    supported(tumblrWin);
+		    
+		    return false;
+		    
+		});
+		
 		
 		$('#videoWatch').on('click', function() {
 		    showProgress();
@@ -194,6 +268,12 @@ $(document).ready(function(){
 		    return false;
 		    
 		});
+		
+		// activate sign up
+		activateForm();
+		
+		// ambassador
+		
 		
 		$('#actionBox').on('click', function() {
 		    return false;
@@ -276,26 +356,41 @@ function init() {
 	    }
 	});
 	
+	
+ 
+    
+      
+}
+
+
+function activateForm() {
+	
 	// subscribe
-   	$('#formWrapper').click(function(){
-   	    focusForm();
-   	});
+  $('#formWrapper').click(function(){
+  	if(!$body.hasClass("ambassadorPage")) {
+   	  focusForm();
+   	 } else if ($body.hasClass("supported")) {
+	   	 focusForm();
+   	 } else {
+	   	 $('#pleaseFirst').css({opacity: "1"});
+   	 }
+  });
    	
-   	// form validation
-   	$('#getInvolved').ketchup().submit(function() {
+  // form validation
+  $('#getInvolved').ketchup().submit(function() {
    		
-   		$('#secInvite').removeClass('error');
-   		$('#result').hide();
-   		   		
+   	$('#secInvite').removeClass('error');
+   	$('#result').hide();
+   	   		   		
 		if ($(this).ketchup('isValid')) {
 		
 			var action = $(this).attr('action');
 			var email  = $('#address').val();
 			var number = getNumber(email);			
-
+									
 			$.ajax({
 				url: action,
-                                async: false,
+        async: false,
 				type: 'POST',
 				data: {
 					email: email,
@@ -303,7 +398,7 @@ function init() {
 				},
 				success: function(data){			
 					if(data == "Thanks") {		
-						window.location.href = "/thanks.php";
+						window.location.href = "../thanks.php";
 					} else {
 						$('#secInvite .bottomContent').fadeOut(50);
 						$('#result').html(data).fadeIn(300,"easeInOutQuad");
@@ -323,13 +418,8 @@ function init() {
 		return false;
 		
 	});
- 
-    
-      
+	
 }
-
-
-
 
 // share tool 
 function showProgress() {
@@ -347,6 +437,51 @@ function showProgress() {
 	}
 	
 }
+
+function supported(win) {
+
+	window.setTimeout(function(){
+	
+		if(win.closed) {
+	
+			if((facebooked == 1 && twittered == 1) || (tumblred == 1 && twittered == 1) || (facebooked == 1 && tumblred == 1)) {
+			  $body.addClass("supported");
+			  $("#address").attr("readonly", false);
+			  $('#pleaseFirst').css({opacity: "0"});
+			}
+		} else {
+			supported(win);			
+		}
+		  
+	},50);
+	
+}
+
+// facebook share
+function shareOnFacebook() {
+    FB.ui(
+      {
+        method        : 'feed',
+        display       : 'iframe',
+        name          : 'name',
+        link          : 'http://www.linktoshare.com',
+        picture       : 'http://www.linktoshare.com/images/imagethumbnail.png',
+        caption       : 'txt caption',
+        description   : 'txt description',
+        access_token  : 'user access token'
+      },
+      function(response) {
+        if (response && response.post_id) {
+
+          // HERE YOU CAN DO WHAT YOU NEED
+          alert('OK! User has published on Facebook.');
+
+        } else {
+          //alert('Post was not published.');
+        }
+      }
+    );
+  }
 
 // get a number in line for each subscriber
 function getNumber(email) {

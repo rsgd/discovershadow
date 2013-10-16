@@ -7,11 +7,12 @@
 <head>
 <meta charset="utf-8">
 
-<title>SHADOW | Thank you, Dreamer</title>
+<title>SHADOW | kickstarter campaign progress update</title>
 
-<meta name="AUTHOR" content="" />
-<meta name="DESCRIPTION" content="Community of dreamers" />
-<meta name="ROBOTS" content="index, follow" />
+<meta name="author" content="Hunter Lee Soik, Raffael Stueken" />
+<meta name="description" content="Please help us spread the word" />
+<meta name="robots" content="index, follow" />
+<meta name="designer" content="Raffael Stueken" />
 
 <!-- /ht Andy Clarke - http://front.ie/lkCwyf -->
 <meta http-equiv="cleartype" content="on">
@@ -24,45 +25,47 @@
 <meta property="og:image" content="http://www.discovershadow.com/img/shadow_remember_your_dreams.jpg" /> 
 <meta property="og:url" content="http://www.discovershadow.com/" />
 
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="../main.css">
 
 <script type="text/javascript" src="//use.typekit.net/ioj7lsp.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
-<script>document.write('<link rel="stylesheet" href="js.css"><\/script>')</script>
-<script src="js/modernizr.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
+<script>window.jQuery || document.write('<script src="../js/jquery-1.7.2.min.js"><\/script>')</script>
+<script>document.write('<link rel="stylesheet" href="../js.css"><\/script>')</script>
+<script src="../js/modernizr.js"></script>
+<script src="../js/plugins.js"></script>
+<script src="../js/script.js"></script>
 
 
 </head>
 
 
-<body class="thanksPage subPage">
+<body class="updatePage subPage statusPage ambassadorPage">
 
 <div id="wrapper">
 
 	<div id="wrapperInner">
 				
-		<section id="secAppimg" class="full sec4">
+		<section id="secAppimg" class="sec4 subPageSec">
 			<div class="sectionWrapper">
+				<div class="appImg"></div>
 				<div class="sectionContent bigContent">
-					<h3 class="logo headline">
-						Thank you
-					</h3>
-					<p class="big highlight upperCase">
-						for becoming a SHADOW Ambassador. <br>
-						Get early access to the app by donating to kickstarter.
-					</p>					
-					<a id="tellFriend" class="button headline" href="http://kck.st/15z9W7D">
-						Support the Kickstarter
-					</a> 
-				</div>
-				<div id="invite" class="sectionContent bottomContent">
+									
+					<h3 class="logo headline">Calling all dreamers</h3>
+						
+					<p class="big highlight upperCase">Become a SHADOW Ambassador</p>
+										
+					<p class="highlight big">
+						We&rsquo;re embarking on an incredible expedition: to build the world&rsquo;s largest dream database. Join our Community of Dreamers and get early access to the SHADOW app when you share SHADOW with your social circle.
+					</p>	
+						
+					<a href="http://kck.st/15z9W7D" class="button headline">
+					    Learn more about Shadow
+					</a>
+					
 				</div>
 			</div>
 		</section>
@@ -91,6 +94,19 @@
 </div>
 
 <div id="borderBottom"></div>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=522666391155442";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 
 <!-- google analytics -->
 <script type="text/javascript">

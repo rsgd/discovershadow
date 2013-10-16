@@ -1,7 +1,7 @@
 <?php
 
 $apiKey = 'dcf6612b72e4498615dd863be59ed470-us6';
-$listId = '010df46968';
+$listId = '169e0679f6';
 $double_optin=false;
 $send_welcome=true;
 $email_type = 'html';

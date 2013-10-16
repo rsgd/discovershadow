@@ -203,6 +203,14 @@ p.centered {
 	margin-top: 160px;
 }
 
+.cap {
+	font-size: 0.85em;
+	letter-spacing: 2px;
+}
+
+.white {
+	color: #fff;
+}
 
 /* content sec1 */
 /* logo */
@@ -607,6 +615,7 @@ body.webkit .appIcon { /* prevent bug */
 	max-width: 80%;
 	margin: 0 auto;
 	border: 1px solid #3b3d3f;
+	position: relative;
 	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.08);
 	transition: 			width 0.25s ease-in-out;
 	-webkit-transition: 	width 0.25s ease-in-out;
@@ -816,6 +825,11 @@ a#twitterIcon {
 	border: 1px solid #4996cc;
 }
 
+a#tumblrIcon {
+	background: #2b4965;
+	border: 1px solid #2b4965;
+}
+
 body.no-touch .links a#facebook:hover span {
 	background: transparent url(img/shadow_sprite.png) center -20px no-repeat;
 }
@@ -850,6 +864,14 @@ body.no-touch .links .actionBox:hover a#facebookIcon span {
 
 body.no-touch .links .actionBox:hover a#twitterIcon span {
 	background: transparent url(img/shadow_sprite.png) center -260px no-repeat;
+}
+
+.links a#tumblrIcon span {
+	background: transparent url(img/shadow_sprite.png) center -280px no-repeat;
+}
+
+body.no-touch .links .actionBox:hover a#tumblrIcon span {
+	background: transparent url(img/shadow_sprite.png) center -300px no-repeat;
 }
 
 #links h4 {
@@ -1223,7 +1245,9 @@ body.statusPage #secAppimg h3.logo  {
 }
 
 body.statusPage h4,
-body.statusPage p.big {
+body.statusPage p.big,
+body.ambassadorPage h3,
+body.ambassadorPage p.upperCase.highlight {
 	color: #fff;
 }
 
@@ -1320,6 +1344,7 @@ iframe {
 	-o-transition: 			0.25s ease-in-out;
 }
 
+
 body.no-touch .actionBox:hover {
 	float: left;
 	background: #171717;
@@ -1408,6 +1433,77 @@ body.p100 #progressBar div {
 
 body.p100 #progressCount div {
 	margin-left: -2em;
+}
+
+/* ambassador */
+
+body.ambassadorPage #secAppimg h3.logo {
+	margin-top: 0.5em;
+}
+
+body.ambassadorPage p.about {
+	padding: 0.5em 0 0.5em 0;
+}
+
+body.ambassadorPage .learnMore {
+	padding: 0.5em 0 0.75em 0;
+}
+
+body.ambassadorPage #video {
+	margin: 0 auto 80px auto;	
+}
+
+.ambassadorPage .actionBox h4 {
+	padding: 1em 0;
+}
+
+body.ambassadorPage #shareAction {
+	margin: 40px auto 20px auto;
+}
+
+#ambassadorSignup  {
+	padding: 2em 0;
+	height: 10em;
+}
+
+#ambassadorSignup #formWrapper {	
+	border: 1px solid #2b2b2b;
+	transition: 				0.25s ease-in-out;
+	-webkit-transition: 0.25s ease-in-out;
+	-moz-transition: 		0.25s ease-in-out;
+	-o-transition: 			0.25s ease-in-out;	
+}
+
+.supported #ambassadorSignup #formWrapper {
+	border: 1px solid #3b3d3f;
+}
+
+#addressCover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #262626;
+	border-radius: 3px;
+	opacity: 0.8;
+}
+
+.supported #addressCover {
+	display: none;
+}
+
+body.ambassadorPage .white {
+	border-bottom: 1px solid #fff;
+}
+
+#pleaseFirst {
+	opacity: 0;
+	transition: 				0.25s ease-in-out;
+	-webkit-transition: 0.25s ease-in-out;
+	-moz-transition: 		0.25s ease-in-out;
+	-o-transition: 			0.25s ease-in-out;
+	margin: 15px 0;
 }
 
 /* responsive */
