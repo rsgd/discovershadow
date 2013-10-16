@@ -36,7 +36,7 @@ var countProgress = 0;
 
 var facebooked = 0;
 var twittered = 0;
-var tumblered = 0;
+var tumblred = 0;
 
 
 $(document).ready(function(){
@@ -140,12 +140,12 @@ $(document).ready(function(){
     	});
     	
     	is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
-    	if(is_chrome && !body.hasClass("ambassadorPage"))  {
-    		$("#tellFriend").click(function() {
-    			window.location.href = 'mailto:friends-email-here?subject=DISCOVER SHADOW - WWW.DISCOVERSHADOW.COM';
-    			return false;
-    		});
-    	}
+    	// if(is_chrome && !$body.hasClass("ambassadorPage"))  {
+    	// 	$("#tellFriend").click(function() {
+    	// 		window.location.href = 'mailto:friends-email-here?subject=DISCOVER SHADOW - WWW.DISCOVERSHADOW.COM';
+    	// 		return false;
+    	// 	});
+    	// }
     	
     // share tool
 		$('#facebookShare').on('click', function() {
