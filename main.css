@@ -776,6 +776,11 @@ body.subPage .button:hover {
 	color: #fff;
 }
 
+body.ambassadorPage .button:hover {
+	color: #fff;
+	background: #e95948;
+}
+
 
 #links {
 	text-align: center;
@@ -830,6 +835,11 @@ a#tumblrIcon {
 	border: 1px solid #2b4965;
 }
 
+a#pinterestIcon {
+	background: #c9061f;
+	border: 1px solid #c9061f;
+}
+
 body.no-touch .links a#facebook:hover span {
 	background: transparent url(img/shadow_sprite.png) center -20px no-repeat;
 }
@@ -872,6 +882,14 @@ body.no-touch .links .actionBox:hover a#twitterIcon span {
 
 body.no-touch .links .actionBox:hover a#tumblrIcon span {
 	background: transparent url(img/shadow_sprite.png) center -300px no-repeat;
+}
+
+.links a#pinterestIcon span {
+	background: transparent url(img/shadow_sprite.png) center -320px no-repeat;
+}
+
+body.no-touch .links .actionBox:hover a#pinterestIcon span {
+	background: transparent url(img/shadow_sprite.png) center -340px no-repeat;
 }
 
 #links h4 {
@@ -1441,6 +1459,14 @@ body.ambassadorPage #secAppimg h3.logo {
 	margin-top: 0.5em;
 }
 
+body.ambassadorPage #secAppimg p {
+    max-width: 780px;
+}
+
+body.ambassadorPage #secCredits {
+    height: 80px;
+}
+
 body.ambassadorPage p.about {
 	padding: 0.5em 0 0.5em 0;
 }
@@ -1454,16 +1480,39 @@ body.ambassadorPage #video {
 }
 
 .ambassadorPage .actionBox h4 {
-	padding: 1em 0;
+	padding: 10px 0;
+}
+
+body.ambassadorPage .links a {
+	margin: 0 0.5em 20px;
 }
 
 body.ambassadorPage #shareAction {
-	margin: 40px auto 20px auto;
+	width: 760px;
+	margin: 0 auto 1em auto;
+}
+
+body.ambassadorPage .actionBox {
+	width: 160px;
+}
+
+body.facebooked #facebookShare2,
+body.twittered #twitterShare2,
+body.tumblred #tumblrShare2,
+body.pined #pinShare2 {
+	background: #afa287 !important;
 }
 
 #ambassadorSignup  {
-	padding: 2em 0;
-	height: 10em;
+	padding: 10px 0 0 0;
+}
+
+body.ambassadorPage #secAppimg p#unLock {
+	max-width: 600px;	
+}
+
+body.ambassadorPage #secAppimg p#unLock2 {
+	margin: 10px auto 8em auto;
 }
 
 #ambassadorSignup #formWrapper {	
@@ -1493,17 +1542,18 @@ body.ambassadorPage #shareAction {
 	display: none;
 }
 
-body.ambassadorPage .white {
-	border-bottom: 1px solid #fff;
-}
-
 #pleaseFirst {
 	opacity: 0;
 	transition: 				0.25s ease-in-out;
 	-webkit-transition: 0.25s ease-in-out;
 	-moz-transition: 		0.25s ease-in-out;
 	-o-transition: 			0.25s ease-in-out;
-	margin: 15px 0;
+	margin: 10px 0;
+}
+
+#pleaseFirst p {
+	color: #57595c;
+	margin-bottom: 0;
 }
 
 /* responsive */
@@ -1698,6 +1748,14 @@ and (max-width : 840px) {
 		width: 480px;
 	}
 	
+	body.ambassadorPage #secAppimg p {
+		max-width: 520px;
+	}
+	
+	body.ambassadorPage #shareAction {
+		width: 380px;
+	}
+	
 	.actionBox {
 		width: 450px;
 		position: relative;
@@ -1815,6 +1873,14 @@ and (max-width : 570px) {
 		width: 370px;
 	}
 	
+	body.ambassadorPage #shareAction {
+		width: 300px;
+	}
+	
+	body.ambassadorPage .actionBox {
+		width: 280px;
+	}
+	
 	#progress {
 		display: none;
 	}
@@ -1857,6 +1923,14 @@ and (max-width : 480px) {
 	}
 	
 	.actionBox {
+		width: 210px;
+	}
+	
+	body.ambassadorPage #shareAction {
+		width: 240px;
+	}
+	
+	body.ambassadorPage .actionBox {
 		width: 210px;
 	}
 

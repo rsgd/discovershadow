@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 
-<title>SHADOW | Please become a SHADOW AMBASSADOR</title>
+<title>SHADOW | COMMUNITY OF DREAMERS</title>
 
 <meta name="author" content="Hunter Lee Soik, Raffael Stueken" />
 <meta name="description" content="Community of dreamers" />
@@ -22,9 +22,10 @@
 
 <meta property="og:title" content="SHADOW | REMEMBER YOUR DREAMS" />
 <meta property="og:site_name" content="DISCOVER SHADOW" />
-<meta property="og:description" content="Community of Dreamers" />
+<meta property="og:description" content="&raquo;A dream you dream alone is only a dream. A dream you dream together is reality.&laquo; – John Lennon" />
 <meta property="og:image" content="http://www.discovershadow.com/img/shadow_remember_your_dreams.jpg" /> 
-<meta property="og:url" content="http://www.discovershadow.com/" />
+<meta property="og:url" content="http://kck.st/15z9W7D" />
+<meta property="og:type" content="website" />
 
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
@@ -39,6 +40,7 @@
 <script src="../js/modernizr.js"></script>
 <script src="../js/plugins.js"></script>
 <script src="http://platform.tumblr.com/v1/share.js"></script>
+<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
 <script src="../js/script.js"></script>
 
 
@@ -56,10 +58,10 @@
 				<div class="appImg"></div>
 				<div class="sectionContent bigContent">
 									
-					<h3 class="logo headline">Become a SHADOW Ambassador</h3>
+					<h3 class="logo headline">Ambassador Circle</h3>
 										
 					<p class="highlight big about">
-						We&rsquo;re embarking on an incredible expedition: to build the world&rsquo;s largest dream database. Join our Community of Dreamers and get free access to the <span class="cap">SHADOW</span> app in May 2014 when you share <span class="cap">SHADOW</span> with your social circle.
+						We&rsquo;re embarking on an incredible expedition: to build the world's largest community of dreamers. Become a <span class="cap">SHADOW</span> Ambassador and get free access to the app in May 2014.
 					</p>						
 					
 					<h4 class="headline learnMore">
@@ -72,11 +74,40 @@
 				
 					
 					<h4 id="shareHead" class="headline">
-						Sign up to become an Ambassador
-					</h4>
+						Sign up for Ambassadors Circle
+					</h4>									
+				
+					<div id="ambassadorSignup">
+							
+          	<form action="../subscribe.php" id="getInvolved" method="POST">
+						
+						    <div id="formWrapper" class="cf">
+						    
+						    	<div class="mc-field-group field">
+						    		<input type="text" value="Enter your email" name="email" class="required email input" id="address" data-validate="validate(required, email)" readonly>										
+						    	</div>
+											    	
+						    	<div class="clear submit">
+						    		<button  class="button headline" id="request_invite_button">sign up</button>
+						    	</div>
+						    	
+						    	<div id="addressCover" title="please complete two tasks first"></div>
+						    
+							</div>					    
+						    
+						</form>
+						
+						<div id="result">
+						</div>	
+						
+						<div id="pleaseFirst">
+							<p class="small">Please complete two tasks first.</p>
+						</div>
+					
+					</div>
 										
-					<p class="highlight big">
-						To unlock the sign up form to become an Ambassador to <span class="cap">SHADOW</span> please complete at least <span class="white">two out of three</span> of these tasks:
+					<p class="highlight big" id="unLock">
+						To unlock the sign up form please support <span class="cap">SHADOW</span> by completing at least <span class="white">two out of four</span> of these actions:
 					</p>
 					
 					
@@ -111,39 +142,22 @@
 							<a href="#" id="tumblrIcon"><span>Tumblr</span></a>
 							
 						</div>
-					
-					</div>		
-									
-				
-					<div id="ambassadorSignup">
+						
+						<div id="pinShare2" class="actionBox">			
 							
-          	<form action="../subscribe.php" id="getInvolved" method="POST">
-						
-						    <div id="formWrapper" class="cf">
-						    
-						    	<div class="mc-field-group field">
-						    		<input type="text" value="Your email address" name="email" class="required email input" id="address" data-validate="validate(required, email)" readonly>										
-						    	</div>
-											    	
-						    	<div class="clear submit">
-						    		<button  class="button headline" id="request_invite_button">sign up</button>
-						    	</div>
-						    	
-						    	<div id="addressCover" title="please complete two tasks first"></div>
-						    
-							</div>					    
-						    
-						</form>
-						
-						<div id="result">
-						</div>	
-						
-						<div id="pleaseFirst">
-							<p class="small">Please complete two tasks first</p>
+							<h4 class="headline">
+								Pin it
+							</h4>
+							
+							<a href="#" id="pinterestIcon"><span>Pinterest</span></a>
+							
 						</div>
 					
-					</div>
-											
+					</div>		
+					
+					<p class="highlight" id="unLock2">
+						Huge thank you for completing all four!
+					</p>					
 					
 				</div>
 			</div>
@@ -152,15 +166,16 @@
 		<section id="secCredits" class="sec12">
 			<div class="sectionWrapper">
 				<div class="sectionContent">
-					
+					<!--
 					<div id="links" class="links">
-						<!--
+						
 						<a href="http://discovershadow.tumblr.com/" id="tumblr"><span>Tumblr</span></a>
 						<a href="https://www.facebook.com/discovershadow" id="facebook"><span>Facebook</span></a>
 						
 						<h4 class="headline">Follow us</h4>	
-						-->
+						
 					</div>	
+					-->
 					
 					<div id="copyRight">
 						DISCOVER SHADOW Inc | All rights reserved | <?php print date("Y"); ?>

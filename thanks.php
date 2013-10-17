@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8">
 
-<title>SHADOW | Thank you, Dreamer</title>
+<title>SHADOW | HELLO DREAMER</title>
 
 <meta name="AUTHOR" content="" />
 <meta name="DESCRIPTION" content="Community of dreamers" />
@@ -52,14 +52,13 @@
 			<div class="sectionWrapper">
 				<div class="sectionContent bigContent">
 					<h3 class="logo headline">
-						Thank you
+						Welcome to the Ambassadors circle
 					</h3>
 					<p class="big highlight upperCase">
-						for becoming a SHADOW Ambassador. <br>
-						Get early access to the app by donating to kickstarter.
+						If you would like to get the app as soon as December 2013 please check out our Diamond, Platinum and Gold rewards on kickstarter.
 					</p>					
 					<a id="tellFriend" class="button headline" href="http://kck.st/15z9W7D">
-						Support the Kickstarter
+						Check out Kickstarter now
 					</a> 
 				</div>
 				<div id="invite" class="sectionContent bottomContent">

@@ -37,6 +37,7 @@ var countProgress = 0;
 var facebooked = 0;
 var twittered = 0;
 var tumblred = 0;
+var pined = 0;
 
 
 $(document).ready(function(){
@@ -204,8 +205,8 @@ $(document).ready(function(){
 		    }      
 		    
 		    var faceWin = window.open ('http://www.facebook.com/share.php?u=http://www.discovershadow.com', '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+topPos+', left='+leftPos);
-		    facebooked = 1;
-		    supported(faceWin);
+		    	    
+		    checkSupport(faceWin,"facebooked",3000);
 		    
 		    return false;
 		    
@@ -213,7 +214,8 @@ $(document).ready(function(){
 		
 		$('#twitterShare2').on('click', function() {
 		    var loc = encodeURIComponent('http://kck.st/15z9W7D'),
-		    	titleTwit = "REMEMBER YOUR DREAMS",
+		    hashtags = "LETSBUILDSHADOW",
+		    	titleTwit = "You may say I'm a dreamer, but I'm not the only one. REMEMBER YOUR DREAMS ",
 		        w = 580, h = 300,
 		    	leftPos = (winW/2)-(w/2),
 		    	topPos  = (winH/2)-(h/2);     
@@ -225,9 +227,9 @@ $(document).ready(function(){
 		        topPos = 0;
 		    }  
 		    
-		    var twittWin = window.open('http://twitter.com/share?text=' + titleTwit + '&url=' + loc, '', 'height=' + h + ', width=' + w + ', top='+topPos +', left='+ leftPos +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
-		    twittered = 1;
-		    supported(twittWin);
+		    var twittWin = window.open('http://twitter.com/share?text=' + titleTwit + '&url=' + loc + '&hashtags=' + hashtags, '', 'height=' + h + ', width=' + w + ', top='+topPos +', left='+ leftPos +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+		    
+		    checkSupport(twittWin,"twittered",2000);
 		    
 		    return false;
 		    
@@ -245,13 +247,36 @@ $(document).ready(function(){
 		        topPos = 0;
 		    } 
 		    		    
-		    var tumblr_photo_source = "http://discovershadow.com/img/shadow_app_01.jpg";
-				var tumblr_photo_caption = "Remember your dreams";
+		    var tumblr_photo_source = "http://discovershadow.com/img/shadow_remember-your-dreams_ui.jpg";
+				var tumblr_photo_caption = "REMEMBER YOUR DREAMS | PLEASE SUPPORT SHADOW KICKSTARTER | http://kck.st/15z9W7D";
 				var tumblr_photo_click_thru = "http://kck.st/15z9W7D";
 		    
 		    var tumblrWin = window.open("http://www.tumblr.com/share/photo?source=" + encodeURIComponent(tumblr_photo_source) + "&caption=" + encodeURIComponent(tumblr_photo_caption) + "&clickthru=" + encodeURIComponent(tumblr_photo_click_thru), '', 'height=' + h + ', width=' + w + ', top='+topPos +', left='+ leftPos +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
-		    tumblred = 1;
-		    supported(tumblrWin);
+		    
+		    checkSupport(tumblrWin,"tumblred",4000);
+		    
+		    return false;
+		    
+		});
+		
+		$('#pinShare2').on('click', function() {
+		    var media = encodeURIComponent('http://www.discovershadow.com/img/shadow_remember-your-dreams_ui.jpg'),
+		    loc = encodeURIComponent('http://kck.st/15z9W7D'),
+		    description = "You may say I'm a dreamer, but I'm not the only one. PLEASE SUPPORT SHADOW KICKSTARTER: ",
+		        w = 750, h = 320,
+		    	leftPos = (winW/2)-(w/2),
+		    	topPos  = (winH/2)-(h/2);     
+		    
+		    if(leftPos <= 0) {
+		        leftPos = 0;
+		    }         
+		    if(topPos <= 0) {
+		        topPos = 0;
+		    }  
+		    
+		    var pinWin = window.open('http://www.pinterest.com/pin/create/bookmarklet/?media=' + media + '&url=' + loc + '&description=' + description + loc, '', 'height=' + h + ', width=' + w + ', top='+topPos +', left='+ leftPos +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+		    
+		    checkSupport(pinWin,"pined",4000);
 		    
 		    return false;
 		    
@@ -438,19 +463,48 @@ function showProgress() {
 	
 }
 
-function supported(win) {
+function checkSupport(win,supportClass,deLay) {
+	
+	window.setTimeout(function(){
+	
+		if(!win.closed) {
+			supported(win,supportClass);
+			
+			if(supportClass == "facebooked") {
+				facebooked = 1;
+			}
+			if(supportClass == "twittered") {
+				twittered = 1;
+			}
+			if(supportClass == "tumblred") {
+				tumblred = 1;
+			}
+			if(supportClass == "pined") {
+				pined = 1;
+			}
+			
+		}
+		
+	},deLay);
+	
+}
+
+function supported(win,supportClass) {
 
 	window.setTimeout(function(){
 	
 		if(win.closed) {
+		
+			
+			$body.addClass(supportClass);
 	
-			if((facebooked == 1 && twittered == 1) || (tumblred == 1 && twittered == 1) || (facebooked == 1 && tumblred == 1)) {
+			if((facebooked == 1 && twittered == 1) || (tumblred == 1 && twittered == 1) || (facebooked == 1 && tumblred == 1) || (facebooked == 1 && pined == 1) || (pined == 1 && tumblred == 1) || (pined== 1 && twittered == 1)) {
 			  $body.addClass("supported");
 			  $("#address").attr("readonly", false);
 			  $('#pleaseFirst').css({opacity: "0"});
 			}
 		} else {
-			supported(win);			
+			supported(win,supportClass);			
 		}
 		  
 	},50);
@@ -458,30 +512,30 @@ function supported(win) {
 }
 
 // facebook share
-function shareOnFacebook() {
-    FB.ui(
-      {
-        method        : 'feed',
-        display       : 'iframe',
-        name          : 'name',
-        link          : 'http://www.linktoshare.com',
-        picture       : 'http://www.linktoshare.com/images/imagethumbnail.png',
-        caption       : 'txt caption',
-        description   : 'txt description',
-        access_token  : 'user access token'
-      },
-      function(response) {
-        if (response && response.post_id) {
-
-          // HERE YOU CAN DO WHAT YOU NEED
-          alert('OK! User has published on Facebook.');
-
-        } else {
-          //alert('Post was not published.');
-        }
-      }
-    );
-  }
+//	function shareOnFacebook() {
+//	    FB.ui(
+//	      {
+//	        method        : 'feed',
+//	        display       : 'iframe',
+//	        name          : 'name',
+//	        link          : 'http://www.linktoshare.com',
+//	        picture       : 'http://www.linktoshare.com/images/imagethumbnail.png',
+//	        caption       : 'txt caption',
+//	        description   : 'txt description',
+//	        access_token  : 'user access token'
+//	      },
+//	      function(response) {
+//	        if (response && response.post_id) {
+//	
+//	          // HERE YOU CAN DO WHAT YOU NEED
+//	          alert('OK! User has published on Facebook.');
+//	
+//	        } else {
+//	          //alert('Post was not published.');
+//	        }
+//	      }
+//	    );
+//	  }
 
 // get a number in line for each subscriber
 function getNumber(email) {
@@ -871,7 +925,7 @@ function focusForm() {
 	if(!$('#formWrapper').hasClass('focused')) {
 		$('#formWrapper').addClass('focused');
 		$('input.input').focus();
-		if($('input.input').attr('value') == "Your email address") {
+		if($('input.input').attr('value') == "Your email address" || $('input.input').attr('value') == "Enter your email") {
 			$('input.input').attr('value', '');
 		}
 	}
