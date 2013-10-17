@@ -1504,7 +1504,7 @@ body.pined #pinShare2 {
 }
 
 #ambassadorSignup  {
-	padding: 10px 0 0 0;
+	padding: 1.5em 0 8em 0;
 }
 
 body.ambassadorPage #secAppimg p#unLock {
@@ -1512,7 +1512,7 @@ body.ambassadorPage #secAppimg p#unLock {
 }
 
 body.ambassadorPage #secAppimg p#unLock2 {
-	margin: 10px auto 8em auto;
+	margin: 10px auto 10px auto;
 }
 
 #ambassadorSignup #formWrapper {	
@@ -1535,7 +1535,7 @@ body.ambassadorPage #secAppimg p#unLock2 {
 	height: 100%;
 	background: #262626;
 	border-radius: 3px;
-	opacity: 0.8;
+	opacity: 0.5;
 }
 
 .supported #addressCover {

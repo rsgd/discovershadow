@@ -20,9 +20,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-<meta property="og:title" content="SHADOW | REMEMBER YOUR DREAMS" />
-<meta property="og:site_name" content="DISCOVER SHADOW" />
-<meta property="og:description" content="&raquo;A dream you dream alone is only a dream. A dream you dream together is reality.&laquo; – John Lennon" />
+<meta property="og:title" content="SHADOW | REMEMBER YOUR DREAM" />
+<meta property="og:site_name" content="SHADOW | COMMUNITY OF DREAMERS" />
+<meta property="og:description" content="Please support our Kickstarter http://kck.st/15z9W7D" />
 <meta property="og:image" content="http://www.discovershadow.com/img/shadow_remember_your_dreams.jpg" /> 
 <meta property="og:url" content="http://kck.st/15z9W7D" />
 <meta property="og:type" content="website" />
@@ -76,35 +76,6 @@
 					<h4 id="shareHead" class="headline">
 						Sign up for Ambassadors Circle
 					</h4>									
-				
-					<div id="ambassadorSignup">
-							
-          	<form action="../subscribe.php" id="getInvolved" method="POST">
-						
-						    <div id="formWrapper" class="cf">
-						    
-						    	<div class="mc-field-group field">
-						    		<input type="text" value="Enter your email" name="email" class="required email input" id="address" data-validate="validate(required, email)" readonly>										
-						    	</div>
-											    	
-						    	<div class="clear submit">
-						    		<button  class="button headline" id="request_invite_button">sign up</button>
-						    	</div>
-						    	
-						    	<div id="addressCover" title="please complete two tasks first"></div>
-						    
-							</div>					    
-						    
-						</form>
-						
-						<div id="result">
-						</div>	
-						
-						<div id="pleaseFirst">
-							<p class="small">Please complete two tasks first.</p>
-						</div>
-					
-					</div>
 										
 					<p class="highlight big" id="unLock">
 						To unlock the sign up form please support <span class="cap">SHADOW</span> by completing at least <span class="white">two out of four</span> of these actions:
@@ -158,6 +129,35 @@
 					<p class="highlight" id="unLock2">
 						Huge thank you for completing all four!
 					</p>					
+				
+					<div id="ambassadorSignup">
+							
+          	<form action="../subscribe.php" id="getInvolved" method="POST">
+						
+						    <div id="formWrapper" class="cf">
+						    
+						    	<div class="mc-field-group field">
+						    		<input type="text" value="Enter your email" name="email" class="required email input" id="address" data-validate="validate(required, email)" readonly>										
+						    	</div>
+											    	
+						    	<div class="clear submit">
+						    		<button  class="button headline" id="request_invite_button">sign up</button>
+						    	</div>
+						    	
+						    	<div id="addressCover" title="please complete two tasks first"></div>
+						    
+							</div>					    
+						    
+						</form>
+						
+						<div id="result">
+						</div>	
+						
+						<div id="pleaseFirst">
+							<p class="small">Please complete two tasks first.</p>
+						</div>
+					
+					</div>
 					
 				</div>
 			</div>

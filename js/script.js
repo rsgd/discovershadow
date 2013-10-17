@@ -194,6 +194,7 @@ $(document).ready(function(){
 		// share tool
 		$('#facebookShare2').on('click', function() {
 		    		    var w = 580, h = 300,
+		    		    loc = encodeURIComponent('http://kck.st/15z9W7D'),
 		    	leftPos = (winW/2)-(w/2),
 		    	topPos  = (winH/2)-(h/2);      
 		    
@@ -204,7 +205,7 @@ $(document).ready(function(){
 		        topPos = 0;
 		    }      
 		    
-		    var faceWin = window.open ('http://www.facebook.com/share.php?u=http://www.discovershadow.com', '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+topPos+', left='+leftPos);
+		    var faceWin = window.open ('http://www.facebook.com/share.php?u=' + loc, '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+topPos+', left='+leftPos);
 		    	    
 		    checkSupport(faceWin,"facebooked",3000);
 		    
