@@ -295,6 +295,15 @@ $(document).ready(function(){
 		    
 		});
 		
+		
+		$('#videoPreview').on('click', function() {
+		    $('#videoPreview').hide();
+		    $('#video').show();
+		    
+		    return false;
+		    
+		});
+		
 		// activate sign up
 		activateForm();
 		
